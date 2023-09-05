@@ -78,15 +78,7 @@ module.exports = {
       ],
       // 底部打赏配置
       footer: {
-        donate: {
-          button: '赞赏', // 打赏按钮
-          avatar: 'assets/apple.png', // 头像地址
-          nickname: 'ROSIt', // 显示打赏昵称
-          message: '随意打赏，但不要超过一顿早餐钱！☕️', // 打赏消息文本
-          text: '『 赠人玫瑰 🌹 手有余香 』',
-          wxpay: 'assets/wechat.jpg', // 微信收款码
-          alipay: 'assets/alipay.jpg', // 支付宝收款码
-        },
+
         copyright: true, // 显示版权
       },
     },

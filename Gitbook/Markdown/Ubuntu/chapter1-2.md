@@ -81,6 +81,9 @@
 
 ### 3 安装ROS Noetic
 
+> **[info] 注意：**  
+> 安装过程中可能遇到网络问题导致软件无法正常下载，可尝试重复执行上一条命令，或者切换个人热点
+
 #### 第1步 在“软件和更新”中配置Ubuntu仓库
 
 点击屏幕左下角的按钮，进入Dash主页，找到软件和更新，勾选”main”, “universe”,”restricted”和 “multiverse”，在“下载自”的“其他站点”中选择国内的镜像源（aliyun等），如下图所示
@@ -104,7 +107,6 @@
 `sudo apt update`  
 `sudo apt install ros-noetic-desktop-full`  
 
-> 执行过程中可能因网络问题导致软件包无法正常下载，可尝试重复执行上述命令 若依旧不行，可以尝试更换手机热点后再次执行上述代码
 
 #### 第5步 设置bashrc
 
@@ -124,7 +126,6 @@
 `sudo pip3 install 6-rosdep`  
 `sudo 6-rosdep`  
 
-> 此步骤执行过程中可能遇到网络问题，若遇到网络问题，重复执行上述代码即可  
 
 出现如下提示，表示此步骤安装完成，可进行下一步   
 ![6-rosdep安装结果](images/chapter1-2/2.4.png "6-rosdep安装结果")
@@ -211,7 +212,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 ```
-> 注意：上述代码中的`/home/jayson/`需要更换为你本机上Anaconda的安装地址
+> **[info] 注意：**  
+> 上述代码中的`/home/jayson/`需要更换为你本机上 Anaconda 的安装地址
 
 .bashrc文件修改结果如下图所示 
 ![bashrc修改结果](images/chapter1-2/4.6.png  "bashrc修改结果")
@@ -396,7 +398,7 @@ Encoding=UTF-8
 StartupNotify=true
 
 ```
-> 说明：需要修改两个地方
+> **[info] 注意：需要修改两个地方**
 > 1. 将Exec的路径更换为firefox的解压缩路径（即你电脑上的存放路径），例如：本机的firefox压缩包存放在home目录的Software中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox`，用此路径替换上述命令中的`/opt/firefox/Firefox-latest-x86_64/firefox`
 > 2. 将Icon的路径更换为firefox的解压缩文件夹中default128.png路径，例如：本机的firefox图片存放在firefox的default文件中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox/browser/chrome/icons/default`，修改结果如下图所示 
 > ![firefox快捷方式](images/chapter1-2/7.5.png "firefox快捷方式")
@@ -508,6 +510,7 @@ StartupNotify=true
 ### 12 安装驱动
 点击屏幕左下角的按钮，进入Dash主页，找到软件和更新，点击附加驱动，选择合适的驱动并应用更改即可(虚拟机无需安装驱动) 
 ![安装驱动](images/chapter1-2/11.1.png  "安装驱动")
-> 说明:  
+> **[info] 说明:**  
 > 1 tested为经过测试的推荐驱动，根据电脑性能进行驱动版本的选择 保守选择，可安装470版本的驱动；  
 > 2 Server为服务器版本使用更新，本系统为桌面版，不适用此类驱动 
+

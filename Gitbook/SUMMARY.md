@@ -14,4 +14,5 @@
     * [4.2 第二节](Markdown/Python/chapter4-2.md)
     * [5.1 第一节](Markdown/Stm32/chapter5-1.md)
     * [5.2 第二节](Markdown/Stm32/chapter5-2.md)
+* [A 常用资源](Markdown/Resource/resource.md)
 

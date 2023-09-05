@@ -12,7 +12,10 @@ let plugins = [
   'flexible-alerts',
   'chapter-fold',
   'pageview-count',
-  'splitter'
+  'splitter',
+  'alerts',
+  'valine',
+  'popup'
 ];
 if (process.env.NODE_ENV == 'dev') plugins.push('livereload');
 
@@ -47,6 +50,11 @@ module.exports = {
         author: 'ROSIt', // 底部版权展示的作者名
       },
     },
+    "valine": {
+      "appId": "8e5VNNxAF0jXkdz2YCpgZyzb-gzGzoHsz",
+      "appKey": "rWHp7npqnQi7dB0oQZbQFfZ8"
+    },
+
   },
   variables: {
     themeLou: {

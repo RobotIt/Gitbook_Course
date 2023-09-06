@@ -1,4 +1,7 @@
-# 1.1 VirtualBox和Ubuntu安装
+# 1.1 VirtualBox 和 Ubuntu安装
+
+> **[danger] 注意**  
+> 所有涉及到使用路径的地方(软件安装路径、虚拟机路径等)，都不要使用中文
 
 ## 1.1.1 VirtualBox安装和设置
 
@@ -16,7 +19,9 @@
 ### 2 VirtualBox安装
 
 > 此处以VirtualBox-6.1.26为例演示其安装过程  
-> VirtualBox-6.1.26下载地址：https://pan.baidu.com/s/1YEWvDxtXSHmaHUr4l8XQ8A 提取码：6666 
+> VirtualBox-6.1.26下载地址：https://pan.baidu.com/s/1vddJwBs755XQvGqfxOv_vQ  提取码：6666
+
+
 
 
 下载完成 VirtualBox 安装包，双击该安装包，弹出安装向导，点击“下一步”
@@ -60,7 +65,7 @@
 点击“扩展”选项栏，点击下图所示“+”号添加扩展包
 ![VirtualBox设置](images/chapter1-1/1.12.png "VirtualBox设置") 
 
-点击“+”号后弹出下图所示的界面，选择下载好的扩展包
+点击“+”号后弹出下图所示的界面，选择下载好的扩展包(扩展包和VirtualBox版本须一致，例如：VirtualBox6.1无法使用7.0的扩展包)
 ![VirtualBox设置](images/chapter1-1/1.13.png "VirtualBox设置") 
 
 选择扩展包后弹出下图界面，点击“安装”，安装扩展包
@@ -86,7 +91,7 @@
 ![新建虚拟机](images/chapter1-1/1.17.png "新建虚拟机") 
 
 配置虚拟机内存大小，采用默认配置即可，后期内存不够可调整。内存越大，虚拟机运行约流畅    
-内存大小选择原则：**绿色拉满即可**。绿色表示建议选择范围，红色表示超标范围。选择完成后，点击“下一步”
+内存大小选择原则：**绿色拉满**。绿色表示建议选择范围，红色表示超标范围。选择完成后，点击“下一步”
 ![新建虚拟机](images/chapter1-1/1.18.png "新建虚拟机") 
 
 虚拟硬盘，选择默认配置，点击“创建”
@@ -138,12 +143,18 @@ VirtualBox-7.0.2创建虚拟机的过程如下，与上述过程类似，可结�
 在“存储”选项栏中，点击控制器IDE下面的 “没有盘片“，见下图。在右边的属性栏中，点击图示图标，在下拉菜单中选择“选择虚拟盘”
 ![虚拟机设置](images/chapter1-1/1.29.png "虚拟机设置")
 
-点击“选择虚拟盘”之后，在弹出窗口中，选择下载好的 Ubuntu18.04 镜像(或者Ubuntu20.04 镜像)
+点击“选择虚拟盘”之后，在弹出窗口中，选择下载好的 Ubuntu18.04 镜像(或者 Ubuntu20.04 镜像)。
+> **[info] 注意：**  
+> 镜像文件不要加载或解压缩，直接使用下载的镜像文件
+
 ![虚拟机设置](images/chapter1-1/1.30.png "虚拟机设置")
 
 (可选)在“共享文件夹”选项栏中，点击右侧”+“号添加共享文件夹    
 共享文件夹作用：将实体机的一个文件夹同步到虚拟机中，可以进实体机和虚拟机的文件传输。在共享文件夹配置中，路径为实体机的文件夹路径，名称为实体机文件夹名称，勾选“自动挂载”
 ![虚拟机设置](images/chapter1-1/1.31.png "虚拟机设置")
+
+> **[info] 说明：**  
+> 虚拟机使用vmware亦可，vmware官网：https://www.vmware.com/cn.html
 
 <br/>
 
@@ -153,7 +164,8 @@ VirtualBox-7.0.2创建虚拟机的过程如下，与上述过程类似，可结�
 
 Ubuntu分为桌面版(Ubuntu Desktop)和服务器版(Ubuntu Live Server)，此处使用桌面版
 > **Ubuntu Desktop** 可在[Ubuntu官网](https://ubuntu.com/)下载，下载网址：https://ubuntu.com/download/desktop  
-> 若下载速度过慢，可使用国内镜像，下载网址：http://mirrors.aliyun.com/ubuntu-releases/
+> 若下载速度过慢，可使用国内镜像，下载网址：http://mirrors.aliyun.com/ubuntu-releases/  
+> 或者使用百度网盘，链接：https://pan.baidu.com/s/1yyXJuxHgye-AzyvgZvSuAw 提取码：6666 
 
 <br/>
 
@@ -200,14 +212,14 @@ Ubuntu分为桌面版(Ubuntu Desktop)和服务器版(Ubuntu Live Server)，此�
 安装完成后，点击“现在重启”，完成安装
 ![ubuntu安装](images/chapter1-1/2.9.png "ubuntu安装")
 
-重启之后，出现下图所示界面，此界面为 Ubuntu18.04 的桌面环境。此时Ubuntu界面无法自动调整窗口大小，需要安装增强功能，见“1.2 Ubuntu安装之后要做的事”
+重启之后，出现下图所示界面，此界面为 Ubuntu18.04 的桌面环境。**此时 Ubuntu 界面无法自动调整窗口大小，需要安装增强功能，见“1.2 Ubuntu安装之后要做的事”**
 ![ubuntu安装](images/chapter1-1/2.10.png "ubuntu安装")
 
 <br/>
 
 ### 3 Ubuntu设置
 
-点击左下角的“Dash”图标(类似于Windows的开始图标)，进入Dash主页界面
+点击左下角的“Dash”图标(类似于 Windows 的开始图标)，进入Dash主页界面
 ![ubuntu设置](images/chapter1-1/2.11.png "ubuntu设置")
 
 点击“设置“，可对Ubuntu进行基本的参数设置，设置界面类似手机操作界面，可自行设置

@@ -51,8 +51,8 @@ module.exports = {
       },
     },
     "valine": {
-      "appId": "8e5VNNxAF0jXkdz2YCpgZyzb-gzGzoHsz",
-      "appKey": "rWHp7npqnQi7dB0oQZbQFfZ8"
+      "appId": "3D2fncm2tN4FI5duTIQA11qY-gzGzoHsz",
+      "appKey": "qh5zfPEVsjNxqCWz3hZMGaPB"
     },
 
   },

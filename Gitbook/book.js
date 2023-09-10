@@ -11,7 +11,6 @@ let plugins = [
   'search-pro',
   'flexible-alerts',
   'chapter-fold',
-  'pageview-count',
   'splitter',
   'alerts',
   'valine',
@@ -40,7 +39,7 @@ module.exports = {
       titleColor: {
         // 自定义标题颜色(不设置则默认使用主题色)
         h1: '#8b008b', // 一级标题颜色
-        h2: '#20b2aa', // 二级标题颜色
+        h2: '#009966', // 二级标题颜色
         h3: '#a52a2a', // 三级标题颜色
       },
       forbidCopy: false, // 页面是否禁止复制（不影响code插件的复制）

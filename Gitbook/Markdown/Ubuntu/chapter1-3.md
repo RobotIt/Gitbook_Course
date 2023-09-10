@@ -876,7 +876,7 @@ FHS定义了两层规范，第一层规范定义了根目录 “/” 下面的�
 - Shell 脚本是一个文本文件，Shell 脚本编程无需编译器，也不需要集成开发环境，一般使用文本编辑器即可，首选的编辑器是 Vim 或 Emacs，在桌面环境中可直接使用图形化编辑器 gedit 或 kate
 - Shell脚本编写的“Hello world”：
 
-```
+```bash
 #！/bin/bash   
 # 显示"Hello World! ”
 echo "Hello World!"
@@ -906,7 +906,7 @@ echo "Hello World!"
     Shell名称 脚本名［参数］  
 
     - 举例：执行 hello 脚本，执行结果见下图
-      ```
+      ```bash
       bash hello    # 使用bash
       sh hello      # 使用sh
       ```
@@ -931,7 +931,7 @@ echo "Hello World!"
   - 在同一个变量中，可以一次存放整型值，下一次再存储字符串
   - 举例：
 
-    ```
+    ```bash
     x=8
     x=”Hello”
     ```
@@ -951,7 +951,7 @@ echo "Hello World!"
   - 变量显示：
   通常使用函数 `echo` 来显示变量，例如：
 
-    ```
+    ```bash
     # 将一个字符串赋值给变量 hello
     $ hello=”Hello World!”
     # 显示变量 hello 的值：
@@ -982,7 +982,7 @@ echo "Hello World!"
     ` export PYTHONPATH=/home/yanting/learning/ssd-caffe/python `
       - 如果希望此环境变量每次开机或打开 shell 时自动设定而无须每次都手动设定，那么需要将export命令写入以上的系统文件中，举例：
 
-        ```
+        ```bash
         sudo gedit ~/.bashrc
         export PYTHONPATH=/home/yanting/learning/caffe/python:$PYTHONPATH
         source ~/.bashrc 
@@ -1017,7 +1017,7 @@ echo "Hello World!"
     - 命令<<分界符，表示从标准输入设备（键盘）中读入，直到遇到分界符才停止（读入的数据不包括分界符），这里的分界符是自定义的字符串
     - 举例：默认情况下，cat 命令会接受标准输入设备（键盘）的输入，并显示到控制台，但如果用文件代替键盘作为输入设备，那么该命令会以指定的文件作为输入设备，并将文件中的内容读取并显示到控制台
   
-    ```
+    ```bash
     cat
     cat << aaa
     ```
@@ -1426,7 +1426,7 @@ echo "Hello World!"
 - 通常从 Ubuntu 官方仓库中获取软件，考虑到稳定性，Ubuntu 官方仓库收录的软件比较正式，版本相对滞后
 - 对于没有收录到 Ubuntu 官方仓库的软件，可以通过 PPA(Personal Package Archive)非正式的软件仓库进行安装，其格式如下：
 
-  ```
+  ```bash
   sudo add-apt-repository ppa:user/ppa-name
   sudo apt-get update
   sudo apt-get install ppa-name

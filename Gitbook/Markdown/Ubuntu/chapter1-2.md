@@ -163,7 +163,7 @@
 
 <br/>
 
-### 5 安装Anaconda
+### 5 (可选)安装Anaconda
 
 #### 第1步 下载Anaconda
 
@@ -267,7 +267,7 @@ unset __conda_setup
 
 <br/>
 
-### 6 Anaconda换源
+### 6 (可选)Anaconda换源
 
 #### 第1步 创建condarc
 
@@ -307,7 +307,7 @@ custom_channels:
 
 <br/>
 
-### 7 Pip换源
+### 7 (可选)Pip换源
 
 #### 第1步 创建pip目录
 
@@ -349,7 +349,7 @@ disable-pip-version-check = true
 
 <br/>
 
-### 8 安装国内版Firefox浏览器
+### 8 (可选)安装国内版Firefox浏览器
 
 #### 第1步 下载Firefox
 
@@ -405,7 +405,7 @@ StartupNotify=true
 
 <br/>
 
-### 9 安装搜狗输入法
+### 9 (可选)安装搜狗输入法
 
 #### 第1步 更新源
 
@@ -460,13 +460,13 @@ StartupNotify=true
 
 <br/>
 
-### 10 安装WPS
+### 10 (可选)安装WPS
 进入ubuntu的应用商店，搜索wps并下载安装即可 
 ![picture](images/chapter1-2/9.1.png  "")
 
 <br/>
 
-### 11 安装微信
+### 11 (可选)安装微信
 
 #### 第1步 获取微信源
 
@@ -507,7 +507,7 @@ StartupNotify=true
 
 <br/>
 
-### 12 安装驱动
+### 12 (可选)安装驱动
 点击屏幕左下角的按钮，进入Dash主页，找到软件和更新，点击附加驱动，选择合适的驱动并应用更改即可(虚拟机无需安装驱动) 
 ![安装驱动](images/chapter1-2/11.1.png  "安装驱动")
 > **[info] 说明:**  

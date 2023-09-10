@@ -19,7 +19,7 @@
 ### 2 VirtualBox安装
 
 > 此处以VirtualBox-6.1.26为例演示其安装过程  
-> VirtualBox-6.1.26下载地址：https://pan.baidu.com/s/1vddJwBs755XQvGqfxOv_vQ  提取码：6666
+> VirtualBox-6.1.26下载地址：https://pan.baidu.com/s/1MH2GiCGyAi81z8ZJJVAelA 提取码：6666
 
 
 
@@ -165,7 +165,7 @@ VirtualBox-7.0.2创建虚拟机的过程如下，与上述过程类似，可结�
 Ubuntu分为桌面版(Ubuntu Desktop)和服务器版(Ubuntu Live Server)，此处使用桌面版
 > **Ubuntu Desktop** 可在[Ubuntu官网](https://ubuntu.com/)下载，下载网址：https://ubuntu.com/download/desktop  
 > 若下载速度过慢，可使用国内镜像，下载网址：http://mirrors.aliyun.com/ubuntu-releases/  
-> 或者使用百度网盘，链接：https://pan.baidu.com/s/1yyXJuxHgye-AzyvgZvSuAw 提取码：6666 
+> 或者使用百度网盘，链接：https://pan.baidu.com/s/1LBg9pnuZ0iYKvlONWmoNgQ 提取码：6666  
 
 <br/>
 

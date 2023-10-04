@@ -1955,6 +1955,6 @@ CMake Error: Could not find hello library
 
 ---
 
-练习参考代码：链接：https://pan.baidu.com/s/14tSQq5ggZ4e1xCrCl_BUSw 提取码：6666
+PDF及练习参考代码：https://pan.baidu.com/s/14tSQq5ggZ4e1xCrCl_BUSw 提取码：6666
 
 

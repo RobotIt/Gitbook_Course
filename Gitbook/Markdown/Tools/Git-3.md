@@ -12,13 +12,13 @@ git pull [options] [<repository> [<refspec>…]]
 git pull <远程主机名> <远程分支名>:<本地分支名>
 ```
 
-1. 描述
+1 描述
 
 将远程存储库中的更改合并到当前分支中。在默认模式下，`git pull`是`git fetch`后跟`git merge FETCH_HEAD`的缩写。
 更准确地说，`git pull`使用给定的参数运行`git fetch`，并调用`git merge`将检索到的分支头合并到当前分支中。 
 使用`–rebase`，它运行`git rebase`而不是`git merge`。
 
-2. 示例
+2 示例
 
 取回 origin 主机的 next 分支，与本地的 master 分支合并： 
 ```
@@ -52,7 +52,7 @@ git pull
 git pull --rebase <远程主机名> <远程分支名>:<本地分支名>
 ```
 
-3. git fetch 和 git pull 的区别
+3 git fetch 和 git pull 的区别
 
 git fetch：相当于是从远程获取最新版本到本地，不会自动合并。
 ```

@@ -1,8 +1,10 @@
-# 2.1 Cmake
+# Cmake
 
 CMake Practice（CMake 实践） -- Cjacker
 
 > 为了阅读方便，本文档整理摘抄自互联网上的PDF版本，仅供学习参考使用。
+
+PDF及练习参考代码：https://pan.baidu.com/s/14tSQq5ggZ4e1xCrCl_BUSw 提取码：6666
 
 ### 前言
 
@@ -41,27 +43,27 @@ cmake 是 kitware 公司以及一些开源开发者在开发几个工具套件(V
 
 cmake 的特点主要有：
 
-1. 开放源代码，使用类 BSD 许可发布 http://cmake.org/HTML/Copyright.html
-2. 跨平台，并可生成 native 编译配置文件，在 Linux/Unix 平台，生成 makefile；在苹果平台，可以生成 xcode；在 Windows 平台，可以生成 MSVC 的工程文件。
-3. 能够管理大型项目，KDE4 就是最好的证明。
-4. 简化编译构建过程和编译过程。Cmake 的工具链非常简单：cmake+make。
-5. 高效虑，按照 KDE 官方说法，CMake 构建 KDE4 的 kdelibs 要比使用 autotools 来构建 KDE3.5.6 的 kdelibs 快 40%，主要是因为 Cmake 在工具链中没有 libtool。
-6. 可扩展，可以为 cmake 编写特定功能的模块，扩充 cmake 功能。
+1 开放源代码，使用类 BSD 许可发布 http://cmake.org/HTML/Copyright.html
+2 跨平台，并可生成 native 编译配置文件，在 Linux/Unix 平台，生成 makefile；在苹果平台，可以生成 xcode；在 Windows 平台，可以生成 MSVC 的工程文件。
+3 能够管理大型项目，KDE4 就是最好的证明。
+4 简化编译构建过程和编译过程。Cmake 的工具链非常简单：cmake+make。
+5 高效虑，按照 KDE 官方说法，CMake 构建 KDE4 的 kdelibs 要比使用 autotools 来构建 KDE3.5.6 的 kdelibs 快 40%，主要是因为 Cmake 在工具链中没有 libtool。
+6 可扩展，可以为 cmake 编写特定功能的模块，扩充 cmake 功能。
 
 #### 3. 问题，难道就没有问题？
 
-1. cmake 很简单，但绝对没有听起来或者想象中那么简单。
-2. cmake 编写的过程实际上是编程的过程，跟以前使用 autotools 一样，不过你需要编写的是 `CMakeLists.txt`(**每个目录一个**)，使用的是”cmake 语言和语法”。
-3. cmake 跟已有体系的配合并不是特别理想，比如 pkgconfig，您在实际使用中会有所体会，虽然有一些扩展可以使用，但并不理想。
+1 cmake 很简单，但绝对没有听起来或者想象中那么简单。
+2 cmake 编写的过程实际上是编程的过程，跟以前使用 autotools 一样，不过你需要编写的是 `CMakeLists.txt`(**每个目录一个**)，使用的是”cmake 语言和语法”。
+3 cmake 跟已有体系的配合并不是特别理想，比如 pkgconfig，您在实际使用中会有所体会，虽然有一些扩展可以使用，但并不理想。
 
 #### 4. 个人的建议
 
-1. 如果你没有实际的项目需求，那么看到这里就可以停下来了，因为 cmake 的学习过程就是实践过程，没有实践，读的再多几天后也会忘记。
-2. 如果你的工程只有几个文件，直接编写 Makefile 是最好的选择。
-3. 如果使用的是 C/C++/Java 之外的语言，请不要使用 cmake(至少目前是这样)。
-4. 如果你使用的语言有非常完备的构建体系，比如 java 的 ant，也不需要学习 cmake，虽然有成功的例子，比如 QT4.3 的 csharp 绑定 qyoto。
-5. 如果项目已经采用了非常完备的工程管理工具，并且不存在维护问题，没有必要迁移到 cmake 。
-6. 如果仅仅使用 qt 编程，没有必要使用 cmake，因为 qmake 管理 Qt 工程的专业性和自动化程度比 cmake 要高很多。
+1 如果你没有实际的项目需求，那么看到这里就可以停下来了，因为 cmake 的学习过程就是实践过程，没有实践，读的再多几天后也会忘记。
+2 如果你的工程只有几个文件，直接编写 Makefile 是最好的选择。
+3 如果使用的是 C/C++/Java 之外的语言，请不要使用 cmake(至少目前是这样)。
+4 如果你使用的语言有非常完备的构建体系，比如 java 的 ant，也不需要学习 cmake，虽然有成功的例子，比如 QT4.3 的 csharp 绑定 qyoto。
+5 如果项目已经采用了非常完备的工程管理工具，并且不存在维护问题，没有必要迁移到 cmake 。
+6 如果仅仅使用 qt 编程，没有必要使用 cmake，因为 qmake 管理 Qt 工程的专业性和自动化程度比 cmake 要高很多。
 
 
 
@@ -228,9 +230,9 @@ ADD_EXECUTABLE(hello ${SRC_LIST})
 
 这个指令用于向终端输出用户定义的信息，包含了三种类型：
 
-1. `SEND_ERROR`，产生错误，生成过程被跳过
-2. `STATUS`，输出前缀为`--`的信息
-3. `FATAL_ERROR`，立即终止所有cmake过程
+1 `SEND_ERROR`，产生错误，生成过程被跳过
+2 `STATUS`，输出前缀为`--`的信息
+3 `FATAL_ERROR`，立即终止所有cmake过程
 
 我们在这里使用的是 STATUS 信息输出，演示了由 PROJECT 指令定义的两个隐式变量 HELLO_BINARY_DIR 和 HELLO_SOURCE_DIR。 
 
@@ -251,9 +253,9 @@ ADD_EXECUTABLE(hello main.c)
 
 前面提到过，cmake 其实仍然要使用”cmake 语言和语法”去构建，上面的内容就是所谓的 ”cmake 语言和语法”，最简单的语法规则是：
 
-1. 变量使用`${}`方式取值，但是在 `IF 控制语句` 中是直接使用变量名。
+1 变量使用`${}`方式取值，但是在 `IF 控制语句` 中是直接使用变量名。
 
-2. 指令(参数1 参数2...)
+2 指令(参数1 参数2...)
 
    参数使用括弧括起，参数之间使用空格或分号分开。
 
@@ -263,7 +265,7 @@ ADD_EXECUTABLE(hello main.c)
 
    ADD_EXECUTABLE(hello main.c;func.c)
 
-3. **指令是大小写无关的，参数和变量是大小写相关的**。但，推荐你全部使用大写指令。
+3 **指令是大小写无关的，参数和变量是大小写相关的**。但，推荐你全部使用大写指令。
 
    上面的 MESSAGE 指令已经用到了这条规则：
 
@@ -331,12 +333,12 @@ make clean
 
 对于 cmake ，内部编译上面已经演示过了，它生成了一些无法自动删除的中间文件，所以，引出了我们对外部编译的探讨，外部编译的过程如下：
 
-1. 首先请清除 `t1 目录`中除 `main.c`、`CMakeLists.txt`之外的所有中间文件，最关键的是`CMakeCache.txt`。  
-2. 在 t1 目录中建立 `build 目录`，当然你也可以在任何地方建立 build 目录，不一定必须在工程目录中。
+1 首先请清除 `t1 目录`中除 `main.c`、`CMakeLists.txt`之外的所有中间文件，最关键的是`CMakeCache.txt`。  
+2 在 t1 目录中建立 `build 目录`，当然你也可以在任何地方建立 build 目录，不一定必须在工程目录中。
 ![t1外部构建](images/chapter2-1/1.4.png "t1外部构建")
 
-3. 进入 `build 目录` ，在终端中执行`cmake ..`（注意，`..`代表父目录，因为父目录存在我们需要的 `CMakeLists.txt`，如果你在其他地方建立了 build 目录，需要运行 `cmake <工程的全路径>`），查看一下 build 目录，就会发现生成了编译需要的 Makefile 以及其他的中间文件。
-4. 继续在终端中运行 `make` 构建工程，就会在当前目录（build 目录）中获得目标文件 hello。
+3 进入 `build 目录` ，在终端中执行`cmake ..`（注意，`..`代表父目录，因为父目录存在我们需要的 `CMakeLists.txt`，如果你在其他地方建立了 build 目录，需要运行 `cmake <工程的全路径>`），查看一下 build 目录，就会发现生成了编译需要的 Makefile 以及其他的中间文件。
+4 继续在终端中运行 `make` 构建工程，就会在当前目录（build 目录）中获得目标文件 hello。
 ![t1外部构建](images/chapter2-1/1.5.png "t1外部构建")
 
 
@@ -361,12 +363,12 @@ make clean
 
 本小节的任务是让前面的 Hello World 更像一个工程，我们需要做的是：
 
-1. 为工程添加一个`子目录 src`，用来放置工程源代码
-2. 添加一个`子目录 doc`，用来放置这个工程的文档 `hello.txt`
-3. 在工程目录添加文本文件 `COPYRIGHT`，`README`
-4. 在工程目录添加一个 `runhello.sh` 脚本，用来调用 hello 二进制
-5. 将构建后的目标文件放入构建目录的 `bin 子目录`
-6. 最终安装这些文件：将 `hello` 二进制与 `runhello.sh` 安装至`/<prefix>/bin`，将`doc 目录`下的内容以及 `COPYRIGHT`、`README` 安装到`/<prefix>/usr/share/doc/cmake/t2`
+1 为工程添加一个`子目录 src`，用来放置工程源代码
+2 添加一个`子目录 doc`，用来放置这个工程的文档 `hello.txt`
+3 在工程目录添加文本文件 `COPYRIGHT`，`README`
+4 在工程目录添加一个 `runhello.sh` 脚本，用来调用 hello 二进制
+5 将构建后的目标文件放入构建目录的 `bin 子目录`
+6 最终安装这些文件：将 `hello` 二进制与 `runhello.sh` 安装至`/<prefix>/bin`，将`doc 目录`下的内容以及 `COPYRIGHT`、`README` 安装到`/<prefix>/usr/share/doc/cmake/t2`
 > 备注：`<prefix>`表示预定义的路径
 
 
@@ -619,12 +621,12 @@ INSTALL(CODE "MESSAGE(\"Sample install message.\")")
 
 在本节开头我们定义了本节的任务如下：
 
-1. 为工程添加一个`子目录 src`，用来放置工程源代码
-2. 添加一个`子目录 doc`，用来放置这个工程的文档 `hello.txt`
-3. 在工程目录添加文本文件 `COPYRIGHT`，`README`
-4. 在工程目录添加一个 `runhello.sh` 脚本，用来调用 hello 二进制
-5. 将构建后的目标文件放入构建目录的 `bin 子目录`
-6. 最终安装这些文件：将 `hello` 二进制与 `runhello.sh` 安装至`/<prefix>/bin`，将`doc 目录`下的内容以及 `COPYRIGHT`、`README` 安装到`/<prefix>/share/doc/cmake/t2`
+1 为工程添加一个`子目录 src`，用来放置工程源代码
+2 添加一个`子目录 doc`，用来放置这个工程的文档 `hello.txt`
+3 在工程目录添加文本文件 `COPYRIGHT`，`README`
+4 在工程目录添加一个 `runhello.sh` 脚本，用来调用 hello 二进制
+5 将构建后的目标文件放入构建目录的 `bin 子目录`
+6 最终安装这些文件：将 `hello` 二进制与 `runhello.sh` 安装至`/<prefix>/bin`，将`doc 目录`下的内容以及 `COPYRIGHT`、`README` 安装到`/<prefix>/share/doc/cmake/t2`
 
 首先我们先补上未添加的文件：
 
@@ -652,15 +654,15 @@ touch README
 
 下面改写各目录的 CMakeLists.txt：
 
-1. 安装 COPYRIGHT/README，修改`t2`工程目录中 CMakelists.txt，加入以下指令：
+1 安装 COPYRIGHT/README，修改`t2`工程目录中 CMakelists.txt，加入以下指令：
 
    `INSTALL(FILES COPYRIGHT README DESTINATION share/doc/cmake/t2)`
 
-2. 安装 runhello.sh，修改`t2`工程目录中 CMakeLists.txt，加入如下指令：
+2 安装 runhello.sh，修改`t2`工程目录中 CMakeLists.txt，加入如下指令：
 
    `INSTALL(PROGRAMS runhello.sh DESTINATION bin)`
 
-3. 安装 doc 中的 hello.txt，这里有两种方式：一是通过在 doc 目录建立 CMakeLists.txt 并将 doc 目录通过 ADD_SUBDIRECTORY 加入工程来完成。另一种方法是直接在工程目录通过 `INSTALL(DIRECTORY)`来完成。前者比较简单，各位可以根据兴趣自己完成，我们来尝试后者，顺便演示以下 DIRECTORY 的安装。
+3 安装 doc 中的 hello.txt，这里有两种方式：一是通过在 doc 目录建立 CMakeLists.txt 并将 doc 目录通过 ADD_SUBDIRECTORY 加入工程来完成。另一种方法是直接在工程目录通过 `INSTALL(DIRECTORY)`来完成。前者比较简单，各位可以根据兴趣自己完成，我们来尝试后者，顺便演示以下 DIRECTORY 的安装。
 
    因为 hello.txt 要安装到 `/<prefix>/share/doc/cmake/t2`，所以我们不能直接安装整个 doc 目录，这里采用的方式是安装 doc 目录中的内容，也就是使用 `doc/`。
 
@@ -668,7 +670,7 @@ touch README
 
    `INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake/t2)`
 
-4. @Gavin注：在 `src`目录的 `CMakeLists.txt`文件中添加如下内容，以安装 hello 到 `/<prefix>/bin`中：
+4 @Gavin注：在 `src`目录的 `CMakeLists.txt`文件中添加如下内容，以安装 hello 到 `/<prefix>/bin`中：
 
    `INSTALL(TARGETS hello RUNTIME DESTINATION bin)`
 
@@ -734,8 +736,8 @@ make install
 
 本节的任务：
 
-1. 建立一个静态库和动态库，提供 `HelloFunc 函数`供其他程序编程使用，HelloFunc 向终端输出 Hello World 字符串。
-2. 安装头文件与共享库。
+1 建立一个静态库和动态库，提供 `HelloFunc 函数`供其他程序编程使用，HelloFunc 向终端输出 Hello World 字符串。
+2 安装头文件与共享库。
 
 #### 1. 准备工作
 
@@ -816,9 +818,9 @@ ADD_LIBRARY(libname [SHARED|STATIC|MODULE]
 
 类型有三种：
 
-1. SHARED，动态库
-2. STATIC，静态库
-3. MODULE，在使用 dyld 的系统有效，如果不支持 dyld，则被当作 SHARED 对待。
+1 SHARED，动态库
+2 STATIC，静态库
+3 MODULE，在使用 dyld 的系统有效，如果不支持 dyld，则被当作 SHARED 对待。
 
 `EXCLUDE_FROM_ALL` 参数的意思是这个库不会被默认构建，除非有其他的组件依赖或者手工构建。
 
@@ -1031,8 +1033,8 @@ compilation terminated.
 
 这条指令可以用来向工程添加多个特定的头文件搜索路径，路径之间用空格分割，如果路径中包含了空格，可以使用双引号将它括起来。默认的行为是追加到当前的头文件搜索路径的后面，你可以通过两种方式来控制搜索路径添加的方式：
 
-1. `CMAKE_INCLUDE_DIRECTORIES_BEFORE`，通过 SET 这个 cmake 变量为 on，可以将添加的头文件搜索路径放在已有路径的前面。
-2. 通过 `AFTER` 或者 `BEFORE` 参数，也可以控制是追加还是置前。
+1 `CMAKE_INCLUDE_DIRECTORIES_BEFORE`，通过 SET 这个 cmake 变量为 on，可以将添加的头文件搜索路径放在已有路径的前面。
+2 通过 `AFTER` 或者 `BEFORE` 参数，也可以控制是追加还是置前。
 
 现在我们在 `src/CMakeLists.txt` 中添加一个头文件搜索路径，方式很简单，加入：
 
@@ -1200,7 +1202,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
 #### 3. cmake常用变量
 
-1. `CMAKE_BINARY_DIR`
+1 `CMAKE_BINARY_DIR`
 
    `PROJECT_BINARY_DIR`
 
@@ -1208,7 +1210,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    这三个变量指代的内容是一致的，如果是 in source 编译，指得就是工程顶层目录；如果是 out-of-source 编译，指的是工程编译发生的目录。PROJECT_BINARY_DIR 跟其他指令稍有区别，现在，你可以理解为他们是一致的。
 
-2. `CMAKE_SOURCE_DIR`
+2 `CMAKE_SOURCE_DIR`
 
    `PROJECT_SOURCE_DIR`
 
@@ -1220,11 +1222,11 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    PROJECT_SOURCE_DIR 跟其他指令稍有区别，现在，你可以理解为他们是一致的。
 
-3. `CMAKE_CURRENT_SOURCE_DIR`
+3 `CMAKE_CURRENT_SOURCE_DIR`
 
    指的是当前处理的 CMakeLists.txt 所在的路径，比如上面我们提到的 src 子目录。
 
-4. `CMAKE_CURRRENT_BINARY_DIR`
+4 `CMAKE_CURRRENT_BINARY_DIR`
 
    如果是 in-source 编译，它跟 CMAKE_CURRENT_SOURCE_DIR 一致；如果是 out-ofsource 编译，他指的是 target 编译目录。
 
@@ -1232,15 +1234,15 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    使用 `SET(EXECUTABLE_OUTPUT_PATH <新路径>)` 并不会对这个变量造成影响，它仅仅修改了最终目标文件存放的路径。
 
-5. `CMAKE_CURRENT_LIST_FILE`
+5 `CMAKE_CURRENT_LIST_FILE`
 
    输出调用这个变量的 CMakeLists.txt 的完整路径
 
-6. `CMAKE_CURRENT_LIST_LINE`
+6 `CMAKE_CURRENT_LIST_LINE`
 
    输出这个变量所在的行
 
-7. `CMAKE_MODULE_PATH`
+7 `CMAKE_MODULE_PATH`
 
    这个变量用来定义自己的 cmake 模块所在的路径。如果你的工程比较复杂，有可能会自己编写一些 cmake 模块，这些 cmake 模块是随你的工程发布的。为了让 cmake 在处理 CMakeLists.txt 时找到这些模块，你需要通过 SET 指令，将自己的 cmake 模块路径设置一下。
 
@@ -1250,11 +1252,11 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    这时候你就可以通过 INCLUDE 指令来调用自己的模块了。
 
-8. `EXECUTABLE_OUTPUT_PATH` 和 `LIBRARY_OUTPUT_PATH`
+8 `EXECUTABLE_OUTPUT_PATH` 和 `LIBRARY_OUTPUT_PATH`
 
    分别用来重新定义最终结果的存放目录，前面我们已经提到了这两个变量。
 
-9. `PROJECT_NAME`
+9 `PROJECT_NAME`
 
    返回通过 PROJECT 指令定义的项目名称。
 
@@ -1266,43 +1268,43 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
 `SET(ENV{变量名} 值)`
 
-1. `CMAKE_INCLUDE_CURRENT_DIR`
+1 `CMAKE_INCLUDE_CURRENT_DIR`
 
    自动添加 CMAKE_CURRENT_BINARY_DIR 和 CMAKE_CURRENT_SOURCE_DIR 到当前处理的 CMakeLists.txt。相当于在每个 CMakeLists.txt 加入：
 
    `INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})`
 
-2. `CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE`
+2 `CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE`
 
    将工程提供的头文件目录始终置于系统头文件目录的前面，当你定义的头文件确实跟系统发生冲突时可以提供一些帮助。
 
-3. CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH 我们在上一节已经提及。
+3 CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH 我们在上一节已经提及。
 
 #### 5. 系统信息
 
-1. CMAKE_MAJOR_VERSION，CMAKE 主版本号，比如 2.4.6 中的 2
-2. CMAKE_MINOR_VERSION，CMAKE 次版本号，比如 2.4.6 中的 4
-3. CMAKE_PATCH_VERSION，CMAKE 补丁等级，比如 2.4.6 中的 6
-4. CMAKE_SYSTEM，系统名称，比如 Linux-2.6.22
-5. CMAKE_SYSTEM_NAME，不包含版本的系统名，比如 Linux
-6. CMAKE_SYSTEM_VERSION，系统版本，比如 2.6.22
-7. CMAKE_SYSTEM_PROCESSOR，处理器名称，比如 i686
-8. UNIX，在所有的类 UNIX 平台为 TRUE，包括 OS X 和 cygwin
-9. WIN32，在所有的 win32 平台为 TRUE，包括 cygwin
+1 CMAKE_MAJOR_VERSION，CMAKE 主版本号，比如 2.4.6 中的 2
+2 CMAKE_MINOR_VERSION，CMAKE 次版本号，比如 2.4.6 中的 4
+3 CMAKE_PATCH_VERSION，CMAKE 补丁等级，比如 2.4.6 中的 6
+4 CMAKE_SYSTEM，系统名称，比如 Linux-2.6.22
+5 CMAKE_SYSTEM_NAME，不包含版本的系统名，比如 Linux
+6 CMAKE_SYSTEM_VERSION，系统版本，比如 2.6.22
+7 CMAKE_SYSTEM_PROCESSOR，处理器名称，比如 i686
+8 UNIX，在所有的类 UNIX 平台为 TRUE，包括 OS X 和 cygwin
+9 WIN32，在所有的 win32 平台为 TRUE，包括 cygwin
 
 #### 6. 主要的开关选项
 
-1. `MAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS`，用来控制 `IF ELSE `语句的书写方式，在下一节语法部分会讲到。
+1 `MAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS`，用来控制 `IF ELSE `语句的书写方式，在下一节语法部分会讲到。
 
-2. `BUILD_SHARED_LIBS`
+2 `BUILD_SHARED_LIBS`
 
    这个开关用来控制默认的库编译方式，如果不进行设置，使用 ADD_LIBRARY 并没有指定库类型的情况下，默认编译生成的库都是静态库。 
 
-3. `CMAKE_C_FLAGS`
+3 `CMAKE_C_FLAGS`
 
    设置C编译选项，也可以通过指令`ADD_DEFINITIONS()`添加。
 
-4. `CMAKE_CXX_FLAGS`
+4 `CMAKE_CXX_FLAGS`
 
    设置C++编译选项，也可以通过指令`ADD_DEFINITIONS()`添加。
 
@@ -1317,7 +1319,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
 #### 1. 基本指令
 
-1. `ADD_DEFINITIONS`
+1 `ADD_DEFINITIONS`
 
    向C，C++编译器添加`-D`定义，比如：
 
@@ -1327,15 +1329,15 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    如果要添加其他的编译器开关，可以通过 CMAKE_C_FLAGS 变量和 CMAKE_CXX_FLAGS 变量设置。
 
-2. `ADD_DEPENDENCIES`
+2 `ADD_DEPENDENCIES`
 
    定义 target 依赖的其他 target，确保在编译本 target 之前，其他的 target 已经被构建。 
 
    `ADD_DEPENDENCIES(target-name depend-target1 depend-target2 ...)`
 
-3. `ADD_EXECUTABLE`、`ADD_LIBRARY`、`ADD_SUBDIRECTORY` 前面已经介绍过了，这里不再罗唆。
+3 `ADD_EXECUTABLE`、`ADD_LIBRARY`、`ADD_SUBDIRECTORY` 前面已经介绍过了，这里不再罗唆。
 
-4. `ADD_TEST` 与 `ENABLE_TESTING` 指令
+4 `ADD_TEST` 与 `ENABLE_TESTING` 指令
 
    `ENABLE_TESTING` 指令用来控制 Makefile 是否构建 test 目标，涉及工程所有目录。语法很简单，没有任何参数，`ENABLE_TESTING()`，一般情况这个指令放在工程的主CMakeLists.txt 中。
 
@@ -1354,7 +1356,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    生成 Makefil e后，就可以运行 `make test` 来执行测试了。
 
-5. `AUX_SOURCE_DIRECTORY`
+5 `AUX_SOURCE_DIRECTORY`
 
    基本语法是：
 
@@ -1371,7 +1373,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    你也可以通过后面提到的 FOREACH 指令来处理这个 LIST。
 
-6. `CMAKE_MINIMUM_REQUIRED`
+6 `CMAKE_MINIMUM_REQUIRED`
 
    其语法为 `CMAKE_MINIMUM_REQUIRED(VERSION versionNumber [FATAL_ERROR])`
 
@@ -1379,7 +1381,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    如果 cmake 版本小与 2.5，则出现严重错误，整个过程中止。
 
-7. `EXEC_PROGRAM`
+7 `EXEC_PROGRAM`
 
    在 CMakeLists.txt 处理过程中执行命令，并不会在生成的 Makefile 中执行。具体语法为: 
 
@@ -1408,7 +1410,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    在cmake 生成 Makefile 的过程中，就会执行 `ls`` 命令，如果返回0，则说明成功执行，那么就输出ls *.c的结果。关于IF语句，后面的控制指令会提到。
 
-8. `FILE` 指令
+8 `FILE` 指令
 
    文件操作指令，基本语法为：
 
@@ -1430,7 +1432,7 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include /usr/include/hello)
 
    这里的语法都比较简单，不在展开介绍了。
 
-9. `INCLUDE` 指令，用来载入 CMakeLists.txt 文件，也用于载入预定义的 cmake 模块
+9 `INCLUDE` 指令，用来载入 CMakeLists.txt 文件，也用于载入预定义的 cmake 模块
 
    `INCLUDE(file1 [OPTIONAL]) `
 
@@ -1484,7 +1486,7 @@ ENDIF(NOT libX)
 
 #### 4. 控制指令
 
-1. `IF`指令
+1 `IF`指令
 
    基本语法为：
 
@@ -1595,7 +1597,7 @@ ENDIF(NOT libX)
    ENDIF(WIN32)
    ```
 
-2. `WHILE`
+2 `WHILE`
 
    WHILE 指令的语法是：
 
@@ -1609,11 +1611,11 @@ ENDIF(NOT libX)
 
    其真假判断条件可以参考 IF 指令。
 
-3. `FOREACH`
+3 `FOREACH`
 
    FOREACH 指令的使用方法有三种形式：
 
-   1. 列表
+   1 列表
 
       ```
       FOREACH(loop_var arg1 arg2 ...)
@@ -1632,7 +1634,7 @@ ENDIF(NOT libX)
       ENDFOREACH(F)
       ```
 
-   2. 范围
+   2 范围
 
       ```
       FOREACH(loop_var RANGE total) 
@@ -1665,7 +1667,7 @@ ENDIF(NOT libX)
       10
       ```
 
-   3. 范围和步进
+   3 范围和步进
 
       ```
       FOREACH(loop_var RANGE start stop [step]) 
@@ -1847,7 +1849,7 @@ ADD_EXECUTABLE(viewer ${mySources} ${optionalSources} ) TARGET_LINK_LIBRARIES(vi
 
 在 `/backup/cmake/` 中建立 `t6 目录`，并在其中建立 `cmake`目录用于存放我们自己定义的 `FindHELLO.cmake` 模块。同时建立 `src 目录`，用于存放我们的源文件。
 
-1. 进入到 t6/cmake目录，新建 `FindHELLO.cmake` 文件，并填写如下内容：
+1 进入到 t6/cmake目录，新建 `FindHELLO.cmake` 文件，并填写如下内容：
 
 ```
 FIND_PATH(HELLO_INCLUDE_DIR hello.h /usr/include/hello /usr/local/include/hello)
@@ -1953,8 +1955,7 @@ CMake Error: Could not find hello library
 
 后面的章节，我们会逐渐学习更多的 cmake 模块使用方法以及用 cmake 来管理 GTK 和 QT4 工程。 
 
----
 
-PDF及练习参考代码：https://pan.baidu.com/s/14tSQq5ggZ4e1xCrCl_BUSw 提取码：6666
+
 
 

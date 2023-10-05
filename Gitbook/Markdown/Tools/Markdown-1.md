@@ -72,13 +72,13 @@ Markdown官方教程： https://markdown.com.cn/
 在单词或短语的前后各添加三个 ***星号***或 ___ABC___。也可以进行组合，例如：**_A_**  或 __*B*__。
 ```
 执行效果：  
-1. 加粗  
+1 加粗  
 在单词或短语前后各加两个**星号**或下划线，__下划线__ 前后不能有字。
 
-2. 斜体  
+2 斜体  
 在单词或短语前后各加一个*星号*或 _下划线_。
 
-3. 斜体和加粗  
+3 斜体和加粗  
 在单词或短语的前后各添加三个 ***星号***或 ___ABC___。也可以进行组合，例如：**_A_**  或 __*B*__。
 
 
@@ -119,17 +119,17 @@ Markdown官方教程： https://markdown.com.cn/
 > *Everything* is going according to **plan**.
 ```
 
-执行效果：
-1. 块引用  
+执行效果：  
+1 块引用  
 在段落前添加一个 > 号，例如  
 >Dorothy followed her through many of the beautiful rooms in her castle.  
 
-2. 多个段落块引用  
+2 多个段落块引用  
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.  
   
-3. 嵌套块引用  
+3 嵌套块引用  
 >一级嵌套第一段 
 >
 >一级嵌套第二段
@@ -142,7 +142,7 @@ Markdown官方教程： https://markdown.com.cn/
 >>>三级嵌套第一段  
 >>>三级嵌套第二段
 
-4. 带有其他语法的块引用  
+4 带有其他语法的块引用  
 > #### The quarterly results look great!
 >
 > - Revenue was off the chart.
@@ -306,14 +306,14 @@ Markdown官方教程： https://markdown.com.cn/
 
 执行效果：  
 
-1. 反引号包裹代码  
+1 反引号包裹代码  
 命令提示，`nano`类型
 
-2. 转义反引号  
+2 转义反引号  
 代码的单词或短语中包含多个反引号时使用  
 ``Use `code` in Markdown file.``
 
-3. 代码块
+3 代码块
 ```
 <html>
     <head>
@@ -365,16 +365,16 @@ Markdown指引网站 **[Markdown Guide](https://www.markdownguide.org)**。
 ```
 
 执行效果：  
-1. 语法代码  
+1 语法代码  
 [超链接显示名](超链接地址 "超链接title")  
 超链接：[Markdown语法教学](https://markdown.com.cn "Markdown语法教学链接")
 
-2. 网址和Email地址
+2 网址和Email地址
 使用尖括号将网址括起  
 <https://markdown.com.cn>  
 <fake@example.com>
 
-3. 带格式化的链接  
+3 带格式化的链接  
 在链接语法前后加星号(`**`)，可以对链接进行加粗  
 Markdown指引网站 **[Markdown Guide](https://www.markdownguide.org)**。  
 在方括号中加反引号，可将链接表示为代码  
@@ -393,12 +393,12 @@ Markdown指引网站 **[Markdown Guide](https://www.markdownguide.org)**。
 ![picture2](https://img0.baidu.com/it/u=2767790527,3674585198&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"Shiprock")
 ```
 
-执行效果：
-1. 本地图片连接
+执行效果：  
+1 本地图片连接
 ![替代文本](图片相对路径 "图片title")
 ![picture](images/a.png "1")
 
-2. 网络图片链接
+2 网络图片链接
 ![picture2](https://img0.baidu.com/it/u=2767790527,3674585198&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"Shiprock")
 
 ### 11 表格

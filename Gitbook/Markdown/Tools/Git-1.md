@@ -55,7 +55,7 @@ Git有什么特点？简单来说就是：高端大气上档次！
 
 这样，你就结束了手动管理多个“版本”的史前时代，进入到版本控制的20世纪。
 
-1. Git的诞生
+1 Git的诞生
 
 很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
 
@@ -78,7 +78,7 @@ Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitH
 历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了。
 
 
-2. 集中式vs分布式
+2 集中式vs分布式
 
 Linus一直痛恨的CVS及SVN都是集中式的版本控制系统，而Git是分布式版本控制系统，集中式和分布式版本控制系统有什么区别呢？
 
@@ -115,7 +115,7 @@ CVS作为最早的开源而且免费的集中式版本控制系统，直到现�
 
 要使用Git，第一步当然是安装Git了。根据你当前使用的平台来阅读下面的文字：
 
-1. 在Linux上安装Git
+1 在Linux上安装Git
 
 首先，你可以试着输入git，看看系统有没有安装Git：
 
@@ -135,7 +135,7 @@ sudo apt-get install git
 
 
 
-2. 在Mac OS X上安装Git
+2 在Mac OS X上安装Git
 
 如果你正在使用Mac做开发，有两种安装Git的方法。
 
@@ -148,7 +148,7 @@ sudo apt-get install git
 Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装备，而且是免费的！
 
 
-3. 在Windows上安装Git
+3 在Windows上安装Git
 
 在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，然后按默认选项安装即可。
 
@@ -170,7 +170,7 @@ $ git config --global user.email "email@example.com"
 
 #### 1.2 创建版本库
 
-1. 创建版本库
+1 创建版本库
 
 什么是版本库呢？版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。
 
@@ -199,7 +199,7 @@ Initialized empty Git repository in /Users/michael/learngit/.git/
 
 > 也不一定必须在空目录下创建Git仓库，选择一个已经有东西的目录也是可以的。不过，不建议你使用自己正在开发的公司项目来学习Git，否则造成的一切后果概不负责。
 
-2. 把文件添加到版本库
+2 把文件添加到版本库
 
 首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。
 
@@ -250,7 +250,7 @@ $ git commit -m "add 3 files."
 
 ```
 
-3. 疑难解答
+3 疑难解答
 
 Q：输入git add readme.txt，得到错误：fatal: not a git repository (or any of the parent directories)。
 
@@ -260,7 +260,7 @@ Q：输入git add readme.txt，得到错误fatal: pathspec 'readme.txt' did not 
 
 A：添加某个文件时，该文件必须在当前目录下存在，用ls或者dir命令查看当前目录的文件，看看文件是否存在，或者是否写错了文件名。
 
-4. 小结
+4 小结
 
 现在总结一下今天学的两点内容：
 
@@ -275,7 +275,7 @@ A：添加某个文件时，该文件必须在当前目录下存在，用ls或�
 
 ### 2 时光机穿梭
 
-1. 时光机穿梭
+1 时光机穿梭
 
 我们已经成功地添加并提交了一个readme.txt文件，现在，是时候继续工作了，于是，我们继续修改readme.txt文件，改成如下内容：
 
@@ -352,7 +352,7 @@ nothing to commit, working tree clean
 Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working tree clean）的。
 
 
-2. 小结
+2 小结
 
     要随时掌握工作区的状态，使用`git status`命令。
 
@@ -361,7 +361,7 @@ Git告诉我们当前没有需要提交的修改，而且，工作目录是干�
 
 #### 2.1 版本回退
 
-1. 版本回退
+1 版本回退
 
 现在，你已经学会了修改文件，然后把修改提交到Git版本库，现在，再练习一次，修改readme.txt文件如下：
 
@@ -516,7 +516,7 @@ eaadf4e HEAD@{4}: commit (initial): wrote a readme file
 
 终于舒了口气，从输出可知，`append GP`L的`commit id`是`1094adb`，现在，你又可以乘坐时光机回到未来了。
 
-2. 小结
+2 小结
 
 现在总结一下：
 
@@ -529,7 +529,7 @@ eaadf4e HEAD@{4}: commit (initial): wrote a readme file
 
 #### 2.2 工作区和暂存区
 
-1. 工作区和暂存区
+1 工作区和暂存区
 
 Git和其他版本控制系统如SVN的一个不同之处就是有**暂存区**的概念。
 
@@ -621,7 +621,7 @@ nothing to commit, working tree clean
 现在版本库变成了这样，暂存区就没有任何内容了：
 ![](images/2.6.jpg)
 
-2. 小结
+2 小结
 
 暂存区是Git非常重要的概念，弄明白了暂存区，就弄明白了Git的很多操作到底干了什么。
 
@@ -630,7 +630,7 @@ nothing to commit, working tree clean
 
 #### 2.3 管理修改
 
-1. 管理修改
+1 管理修改
 
 现在，假定你已经完全掌握了暂存区的概念。下面，我们要讨论的就是，为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件。
 
@@ -716,14 +716,14 @@ index 76d770f..a9c5755 100644
 
 好，现在，把第二次修改提交了，然后开始小结。
 
-2. 小结
+2 小结
 
 现在，你又理解了Git是如何跟踪修改的，每次修改，如果不用`git add`到暂存区，那就不会加入到`commit`中。
 
 
 #### 2.4 撤销修改
 
-1. 撤销修改
+1 撤销修改
 
 自然，你是不会犯错的。不过现在是凌晨两点，你正在赶一份工作报告，你在`readme.txt`中添加了一行：
 ```
@@ -836,7 +836,7 @@ nothing to commit, working tree clean
 现在，假设你不但改错了东西，还从暂存区提交到了版本库，怎么办呢？还记得版本回退一节吗？可以回退到上一个版本。不过，这是有条件的，就是你还没有把自己的本地版本库推送到远程。还记得Git是分布式版本控制系统吗？我们后面会讲到远程版本库，一旦你把stupid boss提交推送到远程版本库，你就真的惨了……
 
 
-2. 小结
+2 小结
 
 又到了小结时间。
 
@@ -849,7 +849,7 @@ nothing to commit, working tree clean
 
 #### 2.5 删除文件
 
-1. 删除文件
+1 删除文件
 
 在Git中，删除也是一个修改操作，我们实战一下，先添加一个新文件`test.txt`到Git并且提交：
 ```
@@ -904,7 +904,7 @@ $ git checkout -- test.txt
 > 注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！
 
 
-2. 小结
+2 小结
 
 命令`git rm`用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删。但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
 
@@ -912,7 +912,7 @@ $ git checkout -- test.txt
 
 ### 3 远程仓库
 
-1. 远程仓库
+1 远程仓库
 
 到目前为止，我们已经掌握了如何在Git仓库里对一个文件进行时光穿梭，你再也不用担心文件备份或者丢失的问题了。
 
@@ -962,13 +962,13 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 
 确保你拥有一个GitHub账号后，我们就即将开始远程仓库的学习。
 
-2. 小结
+2 小结
 
 “有了远程仓库，妈妈再也不用担心我的硬盘了。”——Git点读机
 
 #### 3.1 添加远程库
 
-1. 添加远程库
+1 添加远程库
 
 现在的情景是，你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步。这样，GitHub上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
 
@@ -1023,7 +1023,7 @@ $ git push origin master
 
 把本地`master`分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！
 
-2. SSH警告
+2 SSH警告
 
 当你第一次使用Git的`clone`或者`push`命令连接GitHub时，会得到一个警告：
 
@@ -1045,7 +1045,7 @@ Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 
 如果你实在担心有人冒充GitHub服务器，输入`yes`前可以对照[GitHub的RSA Key的指纹信息](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)是否与SSH连接给出的一致。
 
-3. 删除远程库
+3 删除远程库
 
 如果添加的时候地址写错了，或者就是想删除远程库，可以用`git remote rm <name>`命令。使用前，建议先用`git remote -v`查看远程库信息：
 
@@ -1063,7 +1063,7 @@ $ git remote rm origin
 
 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
 
-4. 小结
+4 小结
 
 要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git`；
 
@@ -1079,7 +1079,7 @@ $ git remote rm origin
 
 #### 3.2 从远程库克隆
 
-1. 从远程库克隆
+1 从远程库克隆
 
 上次我们讲了先有本地库，后有远程库的时候，如何关联远程库。
 
@@ -1119,7 +1119,7 @@ README.md
 
 使用`https`除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用`ssh`协议而只能用`https`。
 
-2. 小结
+2 小结
 
 要克隆一个仓库，首先必须知道仓库的地址，然后使用`git clone`命令克隆。
 
@@ -1129,7 +1129,7 @@ Git支持多种协议，包括`https`，但`ssh`协议速度最快。
 
 ### 4 分支管理
 
-1. 分支管理
+1 分支管理
 
 分支就是科幻电影里面的平行宇宙，当你正在电脑前努力学习Git的时候，另一个你正在另一个平行宇宙里努力学习SVN。
 
@@ -1147,7 +1147,7 @@ Git支持多种协议，包括`https`，但`ssh`协议速度最快。
 
 #### 4.1 创建与合并分支
 
-1. 创建与合并分支
+1 创建与合并分支
 
 在[版本回退](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即`master`分支。**`HEAD`严格来说不是指向提交，而是指向`master`，`master`才是指向提交的，所以，`HEAD`指向的就是当前分支。**
 
@@ -1336,7 +1336,7 @@ $ git branch
 
 **因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在`master`分支上工作效果是一样的，但过程更安全**。
 
-2. switch
+2 switch
 
 我们注意到切换分支使用`git checkout <branch>`，而前面讲过的撤销修改则是`git checkout -- <file>`，同一个命令，有两种作用，确实有点令人迷惑。
 
@@ -1356,7 +1356,7 @@ $ git switch master
 
 使用新的`git switch`命令，比`git checkout`要更容易理解。
 
-3. 小结
+3 小结
 
 Git鼓励大量使用分支：
 
@@ -1374,7 +1374,7 @@ Git鼓励大量使用分支：
 
 #### 4.2 解决冲突
 
-1. 解决冲突
+1 解决冲突
 
 人生不如意之事十之八九，合并分支往往也不是一帆风顺的。
 
@@ -1560,7 +1560,7 @@ Deleted branch feature1 (was 14096d0).
 
 工作完成。
 
-2. 小结
+2 小结
 
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 
@@ -1570,7 +1570,7 @@ Deleted branch feature1 (was 14096d0).
 
 #### 4.3 分支管理策略
 
-1. 分支管理策略
+1 分支管理策略
 
 通常，合并分支时，如果可能，Git会用`Fast forward`模式，但这种模式下，删除分支后，会丢掉分支信息。
 
@@ -1630,7 +1630,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 
 
-2. 分支策略
+2 分支策略
 
 在实际开发中，我们应该按照几个基本原则进行分支管理：
 
@@ -1644,7 +1644,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 ![git-br-policy](images/4.4.png)
 
-3. 小结
+3 小结
 
 Git分支十分强大，在团队开发中应该充分应用。
 
@@ -1652,7 +1652,7 @@ Git分支十分强大，在团队开发中应该充分应用。
 
 #### 4.4 Bug分支
 
-1. Bug分支
+1 Bug分支
 
 软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
 
@@ -1797,7 +1797,7 @@ Git自动给dev分支做了一次提交，注意这次提交的commit是`1d4b803
 
 有些聪明的童鞋会想了，既然可以在master分支上修复bug后，在dev分支上可以“重放”这个修复过程，那么直接在dev分支上修复bug，然后在master分支上“重放”行不行？当然可以，不过你仍然需要`git stash`命令保存现场，才能从dev分支切换到master分支。
 
-2. 小结
+2 小结
 
 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
 
@@ -1807,7 +1807,7 @@ Git自动给dev分支做了一次提交，注意这次提交的commit是`1d4b803
 
 #### 4.5 Feature分支
 
-1. Feature分支
+1 Feature分支
 
 软件开发中，总有无穷无尽的新的功能要不断添加进来。
 
@@ -1871,7 +1871,7 @@ Deleted branch feature-vulcan (was 287773e).
 
 终于删除成功！
 
-2. 小结
+2 小结
 
 开发一个新`feature`，最好新建一个分支；
 
@@ -1879,7 +1879,7 @@ Deleted branch feature-vulcan (was 287773e).
 
 #### 4.6 多人协作
 
-1. 多人协作
+1 多人协作
 
 **当你从远程仓库克隆时，实际上Git自动把本地的`master`分支和远程的`master`分支对应起来了**。并且，远程仓库的默认名称是`origin`。
 
@@ -1900,7 +1900,7 @@ origin  git@github.com:michaelliao/learngit.git (push)
 
 上面显示了可以抓取和推送的`origin`的地址。如果没有推送权限，就看不到push的地址。
 
-2. 推送分支
+2 推送分支
 
 **推送分支，就是把该分支上的所有本地提交推送到远程库**。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
 
@@ -1923,7 +1923,7 @@ $ git push origin dev
 
 总之，就是在Git中，分支完全可以在本地自己藏着玩，是否推送，视你的心情而定！
 
-3. 抓取分支
+3 抓取分支
 
 多人协作时，大家都会往`master`和`dev`分支上推送各自的修改。
 
@@ -2044,16 +2044,16 @@ To github.com:michaelliao/learngit.git
 
 **因此，多人协作的工作模式通常是这样：**
 
-1. 首先，可以试图用`git push origin <branch-name>`推送自己的修改；
-2. 如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
-3. 如果合并有冲突，则解决冲突，并在本地提交；
-4. 没有冲突或者解决掉冲突后，再用`git push origin <branch-name>`推送就能成功！
+1 首先，可以试图用`git push origin <branch-name>`推送自己的修改；  
+2 如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；  
+3 如果合并有冲突，则解决冲突，并在本地提交；  
+4 没有冲突或者解决掉冲突后，再用`git push origin <branch-name>`推送就能成功！
 
 如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to <branch-name> origin/<branch-name>`。
 
 这就是多人协作的工作模式，一旦熟悉了，就非常简单。
 
-4. 小结
+4 小结
 
 - 查看远程库信息，使用`git remote -v`；
 - 本地新建的分支如果不推送到远程，对其他人就是不可见的；
@@ -2064,7 +2064,7 @@ To github.com:michaelliao/learngit.git
 
 #### 4.7 Rebase
 
-1. Rebase
+1 Rebase
 
 在上一节我们看到了，多人在同一个分支上协作时，很容易出现冲突。即使没有冲突，后push的童鞋不得不先pull，在本地合并，然后才能push成功。
 
@@ -2249,7 +2249,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 远程分支的提交历史也是一条直线。
 
-2. 小结
+2 小结
 
 - `rebase`操作可以把本地未push的分叉提交历史整理成直线；
 - `rebase`的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
@@ -2258,7 +2258,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 ### 5 标签管理
 
-1. 标签管理
+1 标签管理
 
 发布一个版本时，我们通常先在版本库中打一个标签（`tag`），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。**所以，标签也是版本库的一个快照**。
 
@@ -2280,7 +2280,7 @@ Git有commit，为什么还要引入tag？
 
 #### 5.1 创建标签
 
-1. 创建标签
+1 创建标签
 
 在Git中打标签非常简单，首先，切换到需要打标签的分支上：
 
@@ -2386,7 +2386,7 @@ diff --git a/readme.txt b/readme.txt
 
  **注意**：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
 
-2. 小结
+2 小结
 
 - 命令`git tag <tagname>`用于新建一个标签，默认为`HEAD`，也可以指定一个commit id；
 - 命令`git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
@@ -2394,7 +2394,7 @@ diff --git a/readme.txt b/readme.txt
 
 #### 5.2 操作标签
 
-1. 操作标签
+1 操作标签
 
 如果标签打错了，也可以删除：
 
@@ -2440,7 +2440,7 @@ To github.com:michaelliao/learngit.git
 
 要看看是否真的从远程库删除了标签，可以登陆GitHub查看。
 
-2. 小结
+2 小结
 
 - 命令`git push origin <tagname>`可以推送一个本地标签到远程；
 - 命令`git push origin --tags`可以推送全部未推送过的本地标签到远程；
@@ -2451,7 +2451,7 @@ To github.com:michaelliao/learngit.git
 
 ### 6 使用Github
 
-1. 使用Github
+1 使用Github
 
 我们一直用GitHub作为免费的远程仓库，如果是个人的开源项目，放到GitHub上是完全没有问题的。其实GitHub还是一个开源协作社区，通过GitHub，既可以让别人参与你的开源项目，也可以参与别人的开源项目。
 
@@ -2489,7 +2489,7 @@ Bootstrap的官方仓库`twbs/bootstrap`、你在GitHub上克隆的仓库`my/boo
 
 如果你没能力修改bootstrap，但又想要试一把pull request，那就Fork一下我的仓库：https://github.com/michaelliao/learngit，创建一个`your-github-id.txt`的文本文件，写点自己学习Git的心得，然后推送一个pull request给我，我会视心情而定是否接受。
 
-2. 小结
+2 小结
 
 - 在GitHub上，可以任意Fork开源仓库；
 - 自己拥有Fork后的仓库的读写权限；
@@ -2499,7 +2499,7 @@ Bootstrap的官方仓库`twbs/bootstrap`、你在GitHub上克隆的仓库`my/boo
 
 ### 7 使用Gitee
 
-1. 使用Gitee
+1 使用Gitee
 
 使用GitHub时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。
 
@@ -2652,7 +2652,7 @@ Gitee也同样提供了Pull request功能，可以让其他小伙伴参与到开
 
 ### 8 自定义Git
 
-1. 自定义Git
+1 自定义Git
 
 在[安装Git](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)一节中，我们已经配置了`user.name`和`user.email`，实际上，Git还有很多可配置项。
 
@@ -2672,7 +2672,7 @@ $ git config --global color.ui true
 
 #### 8.1 忽略特殊文件
 
-1. 忽略特殊文件
+1 忽略特殊文件
 
 有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次`git status`都会显示`Untracked files ...`，有强迫症的童鞋心里肯定不爽。
 
@@ -2684,9 +2684,9 @@ $ git config --global color.ui true
 
 忽略文件的原则是：
 
-1. 忽略操作系统自动生成的文件，比如缩略图等；
-2. 忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的`.class`文件；
-3. 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+1 忽略操作系统自动生成的文件，比如缩略图等；
+2 忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的`.class`文件；
+3 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
 
 举个例子：
 
@@ -2788,14 +2788,14 @@ Git会告诉我们，`.gitignore`的第3行规则忽略了该文件，于是我�
 
 可以通过[https://gitignore.itranswarp.com](https://gitignore.itranswarp.com/)在线生成`.gitignore`文件。
 
-2. 小结
+2 小结
 
 - 忽略某些文件时，需要编写`.gitignore`；
 - `.gitignore`文件本身要放到版本库里，并且可以对`.gitignore`做版本管理！
 
 #### 8.2 配置别名
 
-1. 配置别名
+1 配置别名
 
 有没有经常敲错命令？比如`git status`？`status`这个单词真心不好记。
 
@@ -2873,7 +2873,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 为什么不早点告诉我？别激动，咱不是为了多记几个英文单词嘛！
 
-2. 配置文件
+2 配置文件
 
 配置Git的时候，加上`--global`是针对当前用户起作用的。如果不加，那只针对当前的仓库起作用。
 
@@ -2916,13 +2916,13 @@ $ cat .gitconfig
 
 配置别名也可以直接修改这个文件，如果改错了，可以删掉文件重新通过命令配置。
 
-2. 小结
+3 小结
 
 给Git配置好别名，就可以输入命令时偷个懒。我们鼓励偷懒。
 
 #### 8.3 搭建Git服务器
 
-1. 搭建Git服务器
+1 搭建Git服务器
 
 在[远程仓库](https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416)一节中，我们讲了远程仓库实际上和本地仓库没啥不同，纯粹为了7x24小时开机并交换大家的修改。
 
@@ -2990,19 +2990,19 @@ warning: You appear to have cloned an empty repository.
 
 剩下的推送就简单了。
 
-2. 管理公钥
+2 管理公钥
 
 如果团队很小，把每个人的公钥收集起来放到服务器的`/home/git/.ssh/authorized_keys`文件里就是可行的。如果团队有几百号人，就没法这么玩了，这时，可以用[Gitosis](https://github.com/res0nat0r/gitosis)来管理公钥。
 
 这里我们不介绍怎么玩[Gitosis](https://github.com/res0nat0r/gitosis)了，几百号人的团队基本都在500强了，相信找个高水平的Linux管理员问题不大。
 
-3. 管理权限
+3 管理权限
 
 有很多不但视源代码如生命，而且视员工为窃贼的公司，会在版本控制系统里设置一套完善的权限控制，每个人是否有读写权限会精确到每个分支甚至每个目录下。因为Git是为Linux源代码托管而开发的，所以Git也继承了开源社区的精神，不支持权限控制。不过，因为Git支持钩子（hook），所以，可以在服务器端编写一系列脚本来控制提交等操作，达到权限控制的目的。[Gitolite](https://github.com/sitaramc/gitolite)就是这个工具。
 
 这里我们也不介绍[Gitolite](https://github.com/sitaramc/gitolite)了，不要把有限的生命浪费到权限斗争中。
 
-4. 小结
+4 小结
 
 - 搭建Git服务器非常简单，通常10分钟即可完成；
 - 要方便管理公钥，用[Gitosis](https://github.com/res0nat0r/gitosis)；
@@ -3012,7 +3012,7 @@ warning: You appear to have cloned an empty repository.
 
 ### 9 使用SourceTree
 
-1. 使用SourceTree
+1 使用SourceTree
 
 当我们对Git的提交、分支已经非常熟悉，可以熟练使用命令操作Git后，再使用GUI工具，就可以更高效。
 
@@ -3026,7 +3026,7 @@ Git有很多图形界面工具，这里我们推荐[SourceTree](https://www.sour
 
 也可以选择“New”-“Clone from URL”直接从远程克隆到本地。
 
-2. 提交
+2 提交
 
 我们双击`learngit`这个本地库，SourceTree会打开另一个窗口，展示这个Git库的当前所有分支以及文件状态。选择左侧面板的“WORKSPACE”-“File status”，右侧会列出当前已修改的文件（Unstaged files）：
 
@@ -3044,7 +3044,7 @@ Git有很多图形界面工具，这里我们推荐[SourceTree](https://www.sour
 
 使用SourceTree进行提交就是这么简单，它的优势在于可以可视化地观察文件的修改，并以红色和绿色高亮显示。
 
-3. 分支
+3 分支
 
 在左侧面板的“BRANCHES”下，列出了当前本地库的所有分支。当前分支会加粗并用○标记。要切换分支，我们只需要选择该分支，例如`master`，然后点击右键，在弹出菜单中选择“Checkout master”，实际上是执行命令`git checkout master`：
 
@@ -3054,7 +3054,7 @@ Git有很多图形界面工具，这里我们推荐[SourceTree](https://www.sour
 
 ![merge-dev-into-master](images/9.6.png)
 
-4. 推送
+4 推送
 
 在SourceTree的工具栏上，分别有`Pull`和`Push`，分别对应命令`git pull`和`git push`，只需注意本地和远程分支的名称要对应起来，使用时十分简单。
 
@@ -3062,7 +3062,7 @@ Git有很多图形界面工具，这里我们推荐[SourceTree](https://www.sour
 
 ![push-error](images/9.7.png)
 
-5. 小结
+5 小结
 
 使用SourceTree可以以图形界面操作Git，省去了敲命令的过程，对于常用的提交、分支、推送等操作来说非常方便。
 
@@ -3072,7 +3072,6 @@ SourceTree使用Git命令执行操作，出错时，仍然需要阅读Git命令�
 
 ### 10 期末总结
 
-1. #### 期末总结
 
 终于到了期末总结的时刻了！
 

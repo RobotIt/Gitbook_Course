@@ -33,6 +33,6 @@
         * [2 Markdown数学公式](Markdown/Tools/Markdown-2.md)
     * [3 Cmake](Markdown/Tools/Cmake-1.md)
 * [C 共享资源](Markdown/Shared/README.md)
-    * 1 21级
+    * 21级
         * [1 李霁桐-机工2102](Markdown/Shared/ljt_jg2102.md)
 

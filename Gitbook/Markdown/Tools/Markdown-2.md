@@ -1,5 +1,8 @@
 # Markdown 使用LaTeX插入数学公式
 
+> **[info] 说明**
+>
+> 此网页不支持渲染LaTeX公式，但Markdown是支持的，在Markdown中直接使用`算式`对应的内容，即可看到公式.
 
 ## 1 LaTeX编辑数学公式基本语法元素
 

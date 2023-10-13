@@ -22,7 +22,11 @@
 | $x2$   |  x^2  |
 | $y1$​   |  y_1  |
 
+![](images/md1.png)
+
 > 注意：若上/下标的内容超过一个字符，则内容需要使用花括号括起来，下同
+
+
 
 例如：
 ```
@@ -31,8 +35,7 @@ $x^2+y_0+y_{n+1}$
 
 执行效果为：<br>
 
-$x^2+y_0+y_{n+1}$
-
+![](images/md1.1.png)
 
 
 ### 2 分式
@@ -42,6 +45,7 @@ $x^2+y_0+y_{n+1}$
 | $1/2$   |  1/2  |
 | $\frac{1}{2}$​   |  \frac{1}{2}  |
 
+![](images/md2.png)
 
 例如：<br>
 ```
@@ -50,8 +54,8 @@ $1/2+\frac{y+x}{2}+(x+y)/2$
 
 执行效果为：<br>
 
-$1/2+\frac{y+x}{2}+(x+y)/2$ 
 
+![](images/md1.2.png)
 
 
 ### 3 开方
@@ -61,7 +65,7 @@ $1/2+\frac{y+x}{2}+(x+y)/2$
 | $\sqrt{2}$   |  \sqrt{2}  |
 | $\sqrt[3]{2}$​   |  \sqrt[3]{2}  |
 
-
+![](images/md3.png)
 
 ### 4 累加累乘
 
@@ -74,6 +78,8 @@ $1/2+\frac{y+x}{2}+(x+y)/2$
 | $\prod_{n=1}^{99}{x_n}$    |  \prod_{n=1}^{99}{x_n}  |
 | $\prod\limits_{n=1}^{99}{x_n} $​   |  \prod\limits_{n=1}^{99}{x_n}  |
 
+![](images/md4.png)
+
 > 注意：仅当行内公式时，需要使用\limits调整下标位置，公式块对一些符号默认上下标在最上下面，因此不需要使用\limits，下同
 
 举例：<br>
@@ -82,9 +88,8 @@ $$\prod_{n=1}^{99}{x_n}$$
 ```
 
 执行效果为：<br>
-$$\prod_{n=1}^{99}{x_n}$$
 
-
+![](images/md5.png)
 
 ### 5 积分
 
@@ -92,6 +97,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 |  :-:  | :-:  |
 | $\int_0^1f(x)dx$   |  \int_0^1f(x)dx  |
 
+![](images/md6.png)
 
 ### 6 极限
 
@@ -100,6 +106,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\lim_{n\rightarrow\infty}{n}$   |  \lim_{n\rightarrow\infty}{n}  |
 | $\lim\limits_{n\rightarrow\infty}{n}$   |  \lim\limits_{n\rightarrow\infty}{n}  |
 
+![](images/md7.png)
 
 ### 7 对数
 
@@ -109,7 +116,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\lg{x}$   |  \lg{x}  |
 | $\log_a{x}$   |  \log_a{x}  |
 
-
+![](images/md8.png)
 
 ### 8 希腊字母
 
@@ -142,6 +149,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\Psi$   |  \Psi  | $\psi $  | \psi   |
 | $\Omega$   |  \Omega | $ \omega$  |  \omega  |
 
+![](images/md9.png)
 
 
 ### 9 三角函数
@@ -155,6 +163,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\arccos{x} $   |  \arccos{x} |
 | $\arctan{x}$   |  \arctan{x}|
 
+![](images/md10.png)
 
 ### 10 运算符
 
@@ -170,7 +179,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\geq$   |  \geq|
 | $\approx$   | \approx|
 
-
+![](images/md11.png)
 
 ### 11 特殊字符
 
@@ -194,6 +203,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\{$   |\{ |
 | $\}$   | \}|
 
+![](images/md12.png)
 
 
 
@@ -220,7 +230,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $\longleftrightarrow$   |\longleftrightarrow |
 | $\Longleftrightarrow$   | \Longleftrightarrow|
 
-
+![](images/md13.png)
 
 
 ### 13 上\下花括号
@@ -230,7 +240,7 @@ $$\prod_{n=1}^{99}{x_n}$$
 | $ \overbrace{a+b+\dots+n}^{m个} $   | \overbrace{a+b+\dots+n}^{m个} |
 | $\underbrace{a+b+\dots+n}_{m个} $   | \underbrace{a+b+\dots+n}_{m个}  |
 
-
+![](images/md14.png)
 
 
 
@@ -265,22 +275,8 @@ $$
 ```
 
 执行效果：<br>
-$$
-\left.
-	\begin{cases}
-		a_1x+b_1y+c_1z=d_1\\
-		a_2x+b_2y+c_2z=d_2\\
-		a_3x+b_3y+c_3z=d_3
-	\end{cases}
-\right\}
-\Rightarrow
-\begin{cases}
-    x=z=1\\
-    y=2
-\end{cases}
-$$
 
-
+![](images/md1.3.png)
 
 
 ### 15 连等式
@@ -305,14 +301,8 @@ $$
 ```
 
 执行效果：<br>  
-$$
-\begin{align} 
-f(x) &= x^2+2x+1\\
-&=(x+1)^2
-\end{align}
-$$
 
-
+![](images/md15.png)
 
 
 ### 16 矩阵
@@ -328,11 +318,5 @@ $$
 ```
 
 执行效果：<br>  
-$$
-\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\
-\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\\
-\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\\
-\begin{Bmatrix} 1 & 0 \\ 0 & -1 \end{Bmatrix}\\
-\begin{vmatrix} a & b \\ c & d \end{vmatrix}\\
-\begin{Vmatrix} i & 0 \\ 0 & -i \end{Vmatrix}
-$$
+
+![](images/md16.png)

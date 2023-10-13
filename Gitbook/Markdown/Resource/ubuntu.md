@@ -1,9 +1,6 @@
 # 1 Ubuntu
 
-说明：此页面记录平时浏览的Ubuntu优秀资源
-
 1 Linux命令大全(手册): https://www.linuxcool.com/
-![Linux命令大全(手册)](images/ubunt/1.png "Linux命令大全(手册)")
 
 
 2 鸟哥的Linux私房菜：https://linux.vbird.org/

@@ -19,7 +19,7 @@ let plugins = [
 if (process.env.NODE_ENV == 'dev') plugins.push('livereload');
 
 module.exports = {
-  title: '操作指南',
+  title: 'It',
   author: 'ROSIt',
   lang: 'zh-hans',
   description: 'ROS移动机器人实用技术',
@@ -46,7 +46,7 @@ module.exports = {
       'search-placeholder': '全文搜索', // 搜索框默认文本
       'hide-elements': ['.summary .gitbook-link'], // 需要隐藏的标签
       copyright: {
-        author: 'ROSIt', // 底部版权展示的作者名
+        author: 'RosIt', // 底部版权展示的作者名
       },
     },
     "valine": {
@@ -62,7 +62,7 @@ module.exports = {
         {
           target: '_blank', // 跳转方式: 打开新页面
           url: 'https://www.bilibili.com/video/BV1Ci4y1L7ZZ/?spm_id_from=333.337.search-card.all.click&vd_source=7df640296c15e75b5fbd2da8cc72a434', // 跳转页面
-          name: 'B站', // 导航名称
+          name: 'B站ROS教程', // 导航名称
         },
         // {
         //   target: '_blank', // 跳转方式: 打开新页面

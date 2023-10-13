@@ -28,6 +28,11 @@
         * [1 廖雪峰Git教程](Markdown/Tools/Git-1.md)
         * [2 Git常用指令](Markdown/Tools/Git-2.md)
         * [3 Git疑难解答](Markdown/Tools/Git-3.md)
-    * [2 Markdown](Markdown/Tools/Markdown-1.md)
+    * 2 Markdown
+        * [1 Markdown基本语法](Markdown/Tools/Markdown-1.md)
+        * [2 Markdown数学公式](Markdown/Tools/Markdown-2.md)
     * [3 Cmake](Markdown/Tools/Cmake-1.md)
+* [C 共享资源](Markdown/Shared/README.md)
+    * 1 21级
+        * [1 李霁桐-机工2102](Markdown/Shared/ljt_jg2102.md)
 

@@ -265,6 +265,9 @@ unset __conda_setup
 用法13：查看Anaconda版本  
 `conda --version`
 
+用法14：取消conda自动激活的base基础环境  
+`conda config --set auto_activate_base false`
+
 <br/>
 
 ### 6 (可选)Anaconda换源

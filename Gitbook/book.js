@@ -19,7 +19,7 @@ let plugins = [
 if (process.env.NODE_ENV == 'dev') plugins.push('livereload');
 
 module.exports = {
-  //title: 'ROSit',
+  title: '💢',
   author: 'ROSit',
   lang: 'zh-hans',
   description: 'ROSit',

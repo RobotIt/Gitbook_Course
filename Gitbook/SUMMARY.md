@@ -5,7 +5,7 @@
     * 1 STM32
         * [1 基础入门](Markdown/STM32/chapter1.md)
             * [1.1 STM32简介及工程架构](Markdown/STM32/chapter1-1.md)
-            * [1.2 STM32常用外设](Markdown/STM32/chapter1-2.md)
+            * [1.2 STM32外设-GPIO](Markdown/STM32/chapter1-2.md)
     * 2 Arduino
 * 2 通信层
     * 1 Ubuntu

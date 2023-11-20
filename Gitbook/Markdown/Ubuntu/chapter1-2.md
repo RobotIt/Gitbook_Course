@@ -272,11 +272,11 @@ unset __conda_setup
 
 ### 6 (可选)Anaconda换源
 
-#### 第1步 创建condarc
+#### (Ubuntu)第1步 创建condarc
 
-在家目录使用`ctrl+h`显示隐藏文件，查看家目录下是否有`.condarc`文件 若没有`.condarc`文件，在终端中使用`sudo touch .condarc`命令创建`.condarc`文件
+在家目录使用`ctrl+h`显示隐藏文件，查看家目录下是否有`.condarc`文件。若没有`.condarc`文件，在终端中使用`sudo touch .condarc`命令创建`.condarc`文件
 
-#### 第2步 配置condarc
+#### (Ubuntu)第2步 配置condarc
 打开`.condarc`文件，将以下代码覆盖到该文件夹并保存
 ```
 channels:
@@ -300,36 +300,77 @@ custom_channels:
 结果如下图所示 
 ![配置condarc](images/chapter1-2/5.2.png  "配置condarc")
 
-#### 第3步 清除缓存
+#### (Ubuntu)第3步 清除缓存
 在终端运行`conda clean -i`清除索引缓存，保证使用的是镜像站提供的索引
 
-#### 第4步 测试
+#### (Ubuntu)第4步 测试
 在终端运行`conda create -n myenv numpy`进行测试，根据下载速度判断是否换源成功(成功后下载速度>1M)
 ![换源测试](images/chapter1-2/5.3.png  "换源测试")
 输入y回车，一路回车确认即可
 
 <br/>
 
+#### (Windows)第1步 创建condarc
+
+安装好Anaconda之后，在`Anaconda Prompt`终端中输入`conda config --set show_channel_urls yes`
+
+在C盘的用户目录下（例如，我这台电脑的地址为：C:\Users\Administrator），找到`.condarc`文件。若没有`.condarc`文件，可以新建`.condarc`文件
+
+#### (Windows)第2步 配置condarc
+打开`.condarc`文件，将以下代码覆盖到该文件夹并保存
+```
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+
+```
+结果如下图所示 
+![配置condarc](images/chapter1-2/5.2.1.png  "配置condarc")
+
+#### (Windows)第3步 清除缓存
+在`Anaconda Prompt`终端运行`conda clean -i`清除索引缓存，保证使用的是镜像站提供的索引
+
+#### (Windows)第4步 测试
+在`Anaconda Prompt`终端运行`conda create -n myenv numpy`进行测试，根据下载速度判断是否换源成功(成功后下载速度>1M)
+![换源测试](images/chapter1-2/5.3.1.png  "换源测试")
+输入y回车，一路回车确认即可
+
+<br/>
+
+
 ### 7 (可选)Pip换源
 
-#### 第1步 创建pip目录
+#### (Ubuntu)第1步 创建pip目录
 
 cd到home目录，在终端中执行以下命令，创建.pip目录  
 `cd ~`  
 `sudo mkdir .pip` 
 
-#### 第2步 新建pip.conf文件
+#### (Ubuntu)第2步 新建pip.conf文件
 
 cd 到 .pip 目录，新建pip.conf文件，在终端中执行以下命令  
 `cd .pip`  
 `sudo touch pip.conf`
 
-#### 第3步 打开pip.conf文件
+#### (Ubuntu)第3步 打开pip.conf文件
 
 更新pip.conf文件内容，在终端中输入以下命令  
 `sudo gedit pip.conf`
 
-#### 第4步 编辑pip.conf文件
+#### (Ubuntu)第4步 编辑pip.conf文件
 
 在弹出的文件中填写以下内容  
 ```
@@ -343,11 +384,43 @@ disable-pip-version-check = true
 
 ```
 
-#### 第5步 测试
+#### (Ubuntu)第5步 测试
 
 保存并测试，在终端中输入以下命令`pip install numpy`  
 换源成功后，indexes后显示清华源网址，如下图所示
 ![pip换源测试](images/chapter1-2/6.1.png  "pip换源测试")
+
+
+<br/>
+
+#### (Windows)第1步 创建pip目录
+
+在C盘的用户目录下（例如，我这台电脑的地址为：C:\Users\Administrator），创建pip文件夹  
+
+
+#### (Windows)第2步 新建pip.conf文件
+
+进入到pip文件夹，新建pip.conf文件
+
+
+#### (Windows)第3步 打开pip.conf文件
+
+鼠标右键选择记事本打开pip.conf，更新pip.conf文件内容
+```
+[global]
+index-url=https://pypi.tuna.tsinghua.edu.cn/simple
+timeout = 6000
+
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+disable-pip-version-check = true
+
+```
+
+#### (Windows)第4步 测试
+
+保存并测试，在终端中输入以下命令`pip install numpy`  
+换源成功后，indexes后显示清华源网址
 
 
 <br/>

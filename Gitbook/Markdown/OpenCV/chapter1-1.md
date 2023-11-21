@@ -1,6 +1,6 @@
 # 1.1 OpenCV入门
 
-教程使用说明参见：[基础入门](http://localhost:4000/Markdown/OpenCV/chapter1.html)
+教程使用说明参见：[基础入门](./chapter1.md)
 
 ---
 

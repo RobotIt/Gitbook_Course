@@ -1,4 +1,4 @@
-# Markdown 使用LaTeX插入数学公式
+# 2.2 Markdown数学公式
 
 > **[info] 说明**
 >

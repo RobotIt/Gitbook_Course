@@ -1,4 +1,4 @@
-# [搬]Git 教程--廖雪峰
+# 1.1 Git 教程--廖雪峰[搬]
 
 廖雪峰Git教程链接：https://www.liaoxuefeng.com/wiki/896043488029600
 

@@ -8,6 +8,7 @@
             * [1.1 STM32简介及工程架构](Markdown/STM32/chapter1-1.md)
             * [1.2 STM32外设-GPIO](Markdown/STM32/chapter1-2.md)
     * 2 Arduino
+        * [1 基础入门](Markdown/Arduino/chapter1.md)
 * 2 通信层
     * 1 Ubuntu
         * [1 基础入门](Markdown/Ubuntu/chapter1.md)
@@ -50,4 +51,9 @@
 * [C 优秀案例](Markdown/Shared/README.md)
     * 21级
         * [1 李霁桐-机工2102](Markdown/Shared/ljt_jg2102.md)
+* D 需求发布
+    * 学科竞赛
+        * [1 大创课题](Markdown/Needs/dacahung.md)
+    * 毕业设计
+        * [1 毕设课题](Markdown/Needs/graduation.md)
 

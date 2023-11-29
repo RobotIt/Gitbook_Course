@@ -18,7 +18,7 @@
 在VirtualBox的菜单栏，点击`设备`，选择`安装增强功能`，见下图红框所示  
 ![安装增强功能](images/chapter1-2/0.1.png "安装增强功能") 
 
-#### 第3步 安装增强功能
+#### 第4步 安装增强功能
 
 1 接上步骤，点击完`安装增强功能，会弹出如下对话框，选择`运行`
 ![安装增强功能对话框](images/chapter1-2/0.2.png "安装增强功能对话框") 
@@ -30,7 +30,7 @@
 ![增强功能安装过程](images/chapter1-2/0.3.png "增强功能安装过程") 
 
 
-#### 第4步 配置增强功能
+#### 第5步 配置增强功能
 
 安装成功后，在VirtualBox的菜单栏，点击`设备`，将`共享粘贴板`和`拖放`选择为`双向`，见下图
 ![共享粘贴板](images/chapter1-2/0.6.png "共享粘贴板") 
@@ -53,27 +53,27 @@
 
 #### 第2步 安装vscode
 
-切换到下载文件所在的目录，打开终端，执行`sudo apt install ./第1步下载的文件`(输入code后按Tab键自动补全)
+切换到下载文件所在的目录，打开终端，执行`sudo dpkg -i ./第1步下载的文件`(输入code后按Tab键自动补全)
 ![vscode安装包](images/chapter1-2/1.2.png "vscode安装包")
-例如：第1步下载的文件名称为`code_1.59.1-1629375198_amd64.deb`，则执行`sudo apt install ./code_1.59.1-1629375198_amd64.deb`  
+例如：第1步下载的文件名称为`code_1.59.1-1629375198_amd64.deb`，则执行`sudo dpkg -i ./code_1.59.1-1629375198_amd64.deb`  
 在终端窗口输入代码如下图 
 ![vscode安装代码](images/chapter1-2/1.3.png "vscode安装代码")
 
 #### 第3步 安装扩展
 
 ![vscode扩展](images/chapter1-2/1.4.png "vscode扩展")
-1. C/C++ @Microsoft
-2. C/C++ Extension Pack  @Microsoft
-3. Chinese(Simplified)(简体中文)  @Microsoft
-4. CMake  @twxs
-5. CMake Tools  @Microsoft
-6. ROS  @Microsoft
-7. Python  @Microsoft
-8. Pylance  @Microsoft
-9. Markdown All in One  @Yu Zhang
-10. Markdown Preview Enhanced  @Yiyi Wang
-11. vscode-icons  @VSCode Icons Team
-12. Code Runner  @Jun Han  
+1 C/C++ @Microsoft  
+2 C/C++ Extension Pack  @Microsoft  
+3 Chinese(Simplified)(简体中文)  @Microsoft  
+4 CMake  @twxs  
+5 CMake Tools  @Microsoft  
+6 ROS  @Microsoft  
+7 Python  @Microsoft  
+8 Pylance  @Microsoft  
+9 Markdown All in One  @Yu Zhang  
+10 Markdown Preview Enhanced  @Yiyi Wang  
+11 vscode-icons  @VSCode Icons Team  
+12 Code Runner  @Jun Han  
 
 > 备注：@Microsoft表示发行商为Microsoft，选择对应的扩展进行安装
 
@@ -163,7 +163,7 @@
 
 <br/>
 
-### 5 安装Anaconda
+### 5 (可选)安装Anaconda
 
 #### 第1步 下载Anaconda
 
@@ -179,7 +179,7 @@
 
 #### 第2步 安装Anaconda
 
-在安装包位置右键，选择在终端打开，输入bash Ana，后续用Tab进行补齐代码，得到下载的Anaconda版本号相关代码  
+在安装包位置右键，选择在终端打开，输入`bash Ana`，后续用Tab进行补齐代码，得到下载的Anaconda版本号相关代码  
 `bash Anaconda3-2023.03-1-Linux-x86_64.sh` 
 ![安装Anaconda命令](images/chapter1-2/4.4.png  "安装Anaconda命令")
 根据提示，一路回车+yes即可完成安装 
@@ -265,15 +265,18 @@ unset __conda_setup
 用法13：查看Anaconda版本  
 `conda --version`
 
+用法14：取消conda自动激活的base基础环境  
+`conda config --set auto_activate_base false`
+
 <br/>
 
-### 6 Anaconda换源
+### 6 (可选)Anaconda换源
 
-#### 第1步 创建condarc
+#### (Ubuntu)第1步 创建condarc
 
-在家目录使用`ctrl+h`显示隐藏文件，查看家目录下是否有`.condarc`文件 若没有`.condarc`文件，在终端中使用`sudo touch .condarc`命令创建`.condarc`文件
+在家目录使用`ctrl+h`显示隐藏文件，查看家目录下是否有`.condarc`文件。若没有`.condarc`文件，在终端中使用`sudo touch .condarc`命令创建`.condarc`文件
 
-#### 第2步 配置condarc
+#### (Ubuntu)第2步 配置condarc
 打开`.condarc`文件，将以下代码覆盖到该文件夹并保存
 ```
 channels:
@@ -297,36 +300,77 @@ custom_channels:
 结果如下图所示 
 ![配置condarc](images/chapter1-2/5.2.png  "配置condarc")
 
-#### 第3步 清除缓存
+#### (Ubuntu)第3步 清除缓存
 在终端运行`conda clean -i`清除索引缓存，保证使用的是镜像站提供的索引
 
-#### 第4步 测试
+#### (Ubuntu)第4步 测试
 在终端运行`conda create -n myenv numpy`进行测试，根据下载速度判断是否换源成功(成功后下载速度>1M)
 ![换源测试](images/chapter1-2/5.3.png  "换源测试")
 输入y回车，一路回车确认即可
 
 <br/>
 
-### 7 Pip换源
+#### (Windows)第1步 创建condarc
 
-#### 第1步 创建pip目录
+安装好Anaconda之后，在`Anaconda Prompt`终端中输入`conda config --set show_channel_urls yes`
+
+在C盘的用户目录下（例如，我这台电脑的地址为：C:\Users\Administrator），找到`.condarc`文件。若没有`.condarc`文件，可以新建`.condarc`文件
+
+#### (Windows)第2步 配置condarc
+打开`.condarc`文件，将以下代码覆盖到该文件夹并保存
+```
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+
+```
+结果如下图所示 
+![配置condarc](images/chapter1-2/5.2.1.png  "配置condarc")
+
+#### (Windows)第3步 清除缓存
+在`Anaconda Prompt`终端运行`conda clean -i`清除索引缓存，保证使用的是镜像站提供的索引
+
+#### (Windows)第4步 测试
+在`Anaconda Prompt`终端运行`conda create -n myenv numpy`进行测试，根据下载速度判断是否换源成功(成功后下载速度>1M)
+![换源测试](images/chapter1-2/5.3.1.png  "换源测试")
+输入y回车，一路回车确认即可
+
+<br/>
+
+
+### 7 (可选)Pip换源
+
+#### (Ubuntu)第1步 创建pip目录
 
 cd到home目录，在终端中执行以下命令，创建.pip目录  
 `cd ~`  
 `sudo mkdir .pip` 
 
-#### 第2步 新建pip.conf文件
+#### (Ubuntu)第2步 新建pip.conf文件
 
 cd 到 .pip 目录，新建pip.conf文件，在终端中执行以下命令  
 `cd .pip`  
 `sudo touch pip.conf`
 
-#### 第3步 打开pip.conf文件
+#### (Ubuntu)第3步 打开pip.conf文件
 
 更新pip.conf文件内容，在终端中输入以下命令  
 `sudo gedit pip.conf`
 
-#### 第4步 编辑pip.conf文件
+#### (Ubuntu)第4步 编辑pip.conf文件
 
 在弹出的文件中填写以下内容  
 ```
@@ -340,7 +384,7 @@ disable-pip-version-check = true
 
 ```
 
-#### 第5步 测试
+#### (Ubuntu)第5步 测试
 
 保存并测试，在终端中输入以下命令`pip install numpy`  
 换源成功后，indexes后显示清华源网址，如下图所示
@@ -349,7 +393,39 @@ disable-pip-version-check = true
 
 <br/>
 
-### 8 安装国内版Firefox浏览器
+#### (Windows)第1步 创建pip目录
+
+在C盘的用户目录下（例如，我这台电脑的地址为：C:\Users\Administrator），创建pip文件夹  
+
+
+#### (Windows)第2步 新建pip.conf文件
+
+进入到pip文件夹，新建pip.conf文件
+
+
+#### (Windows)第3步 打开pip.conf文件
+
+鼠标右键选择记事本打开pip.conf，更新pip.conf文件内容
+```
+[global]
+index-url=https://pypi.tuna.tsinghua.edu.cn/simple
+timeout = 6000
+
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+disable-pip-version-check = true
+
+```
+
+#### (Windows)第4步 测试
+
+保存并测试，在终端中输入以下命令`pip install numpy`  
+换源成功后，indexes后显示清华源网址
+
+
+<br/>
+
+### 8 (可选)安装国内版Firefox浏览器
 
 #### 第1步 下载Firefox
 
@@ -358,7 +434,7 @@ disable-pip-version-check = true
 
 ![Firefox官网](images/chapter1-2/7.1.png  "Firefox官网")
 
-#### 第2步 移动Firefox(此步骤为可选步骤)
+#### 第2步 移动Firefox(可选)
 
 在家目录下新建`Software`文件，将firefox压缩包移动到家目录下的`Software`文件中 
 ![Software文件夹](images/chapter1-2/7.3.png  "Software文件夹")
@@ -376,11 +452,11 @@ disable-pip-version-check = true
 
 #### 第5步 创建Firefox快捷方式
 
-创建Firefox快捷方式，总共有2个步骤：
-1. 进入/usr/share/applications目录，新建firefox.desktop文件，在终端中执行以下命令  
+创建Firefox快捷方式，总共有2个步骤：  
+1 进入/usr/share/applications目录，新建firefox.desktop文件，在终端中执行以下命令  
 `cd /usr/share/applications`  
-`sudo touch firefox.desktop`
-2. 更新firefox.desktop文件内容，在终端中输入以下命令  
+`sudo touch firefox.desktop`  
+2 更新firefox.desktop文件内容，在终端中输入以下命令  
 `sudo gedit firefox.desktop`  
 在弹出的窗口中输入以下内容  
 
@@ -398,14 +474,14 @@ Encoding=UTF-8
 StartupNotify=true
 
 ```
-> **[info] 注意：需要修改两个地方**
-> 1. 将Exec的路径更换为firefox的解压缩路径（即你电脑上的存放路径），例如：本机的firefox压缩包存放在home目录的Software中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox`，用此路径替换上述命令中的`/opt/firefox/Firefox-latest-x86_64/firefox`
-> 2. 将Icon的路径更换为firefox的解压缩文件夹中default128.png路径，例如：本机的firefox图片存放在firefox的default文件中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox/browser/chrome/icons/default`，修改结果如下图所示 
+> **[info] 注意：需要修改两个地方**  
+> 1 将Exec的路径更换为firefox的解压缩路径（即你电脑上的存放路径），例如：本机的firefox压缩包存放在home目录的Software中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox`，用此路径替换上述命令中的`/opt/firefox/Firefox-latest-x86_64/firefox`  
+> 2 将Icon的路径更换为firefox的解压缩文件夹中default128.png路径，例如：本机的firefox图片存放在firefox的default文件中，则该路径为`/home/jayson/Software/Firefox-latest-x86_64/firefox/browser/chrome/icons/default`，修改结果如下图所示  
 > ![firefox快捷方式](images/chapter1-2/7.5.png "firefox快捷方式")
 
 <br/>
 
-### 9 安装搜狗输入法
+### 9 (可选)安装搜狗输入法
 
 #### 第1步 更新源
 
@@ -415,31 +491,31 @@ StartupNotify=true
 
 #### 第2步 安装fcitx输入法框架
 
-1、在终端执行  
+1 在终端执行  
 `sudo apt install fcitx`
 ![安装fcitx](images/chapter1-2/8.2.1.png "安装fcitx")
 
-2、设置fcitx为系统输入法
+2 设置fcitx为系统输入法
 点击左下角菜单选择语言支持，将语言选择为fcitx
 ![设置fcitx](images/chapter1-2/8.2.2.png "设置fcitx")
 ![设置fcitx](images/chapter1-2/8.2.3.png "设置fcitx")
 
-3、设置fcitx开机自启动
+3 设置fcitx开机自启动
 在终端执行  
 `sudo cp /usr/share/applications/fcitx.desktop /etc/xdg/autostart/`
 ![设置fcitx开机自启动](images/chapter1-2/8.2.4.png "设置fcitx开机自启动")
 
-4、卸载系统ibus输入法框架
+4 卸载系统ibus输入法框架
 在终端执行  
 `sudo apt purge ibus`
 ![卸载ibus](images/chapter1-2/8.2.5.png "卸载ibus")
 
 #### 第3步 安装搜狗输入法
 
-1、在官网下载搜狗输入法安装包，并安装，安装命令 `sudo dpkg -i 安装包名`
+1 在官网下载搜狗输入法安装包，并安装，安装命令 `sudo dpkg -i 安装包名`
 ![输入法安装命令](images/chapter1-2/8.3.1.png "输入法安装命令")
 
-2、安装输入法依赖
+2 安装输入法依赖
 在终端执行  
 `sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2`  
 `sudo apt install libgsettings-qt1`
@@ -447,12 +523,12 @@ StartupNotify=true
 
 #### 第4步 重启电脑、调出输入法
 
-1、重启电脑
+1 重启电脑
 
-2、查看右上角，可以看到“搜狗”字样，在输入窗口即可且出搜狗输入法 
+2 查看右上角，可以看到“搜狗”字样，在输入窗口即可且出搜狗输入法 
 ![查看搜狗输入法](images/chapter1-2/8.4.1.png "查看搜狗输入法")
 
-3、没有“搜狗”字样，选择配置，将搜狗加入输入法列表即可
+3 没有“搜狗”字样，选择配置，将搜狗加入输入法列表即可
 ![配置搜狗输入法](images/chapter1-2/8.4.2.png "配置搜狗输入法")
 ![配置搜狗输入法](images/chapter1-2/8.4.3.png "")
 至此，搜狗输入法安装完毕
@@ -460,13 +536,20 @@ StartupNotify=true
 
 <br/>
 
-### 10 安装WPS
+### 10 (可选)安装WPS
+方法1：  
 进入ubuntu的应用商店，搜索wps并下载安装即可 
-![picture](images/chapter1-2/9.1.png  "")
+![应用商店安装WPS](images/chapter1-2/9.1.png  "应用商店安装WPS")
+
+方法2：  
+进入WPS官网：https://www.wps.cn/product/wpslinux#  
+点击`立即下载`，在弹出的页面中选择`For X64`，见下图
+![官方网站安装WPS](images/chapter1-2/9.2.png  "官方网站安装WPS")  
+下载软件包为.deb安装包，使用`sudo dpkg -i wps(Tab补全)`安装即可
 
 <br/>
 
-### 11 安装微信
+### 11 (可选)安装微信
 
 #### 第1步 获取微信源
 
@@ -507,7 +590,7 @@ StartupNotify=true
 
 <br/>
 
-### 12 安装驱动
+### 12 (可选)安装驱动
 点击屏幕左下角的按钮，进入Dash主页，找到软件和更新，点击附加驱动，选择合适的驱动并应用更改即可(虚拟机无需安装驱动) 
 ![安装驱动](images/chapter1-2/11.1.png  "安装驱动")
 > **[info] 说明:**  

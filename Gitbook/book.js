@@ -2,19 +2,20 @@ let plugins = [
   '-lunr', // 默认插件，无需引用
   '-sharing', // 默认插件，无需引用
   '-search', // 默认插件，无需引用
-  '-favicon', // 默认插件，无需引用
+  '-favicon', // 默认插件，无需引用，更改网站的图标
   '-share',
-  'code',
-  'expandable-chapters',
-  'theme-lou',
-  'back-to-top-button',
-  'search-pro',
-  'flexible-alerts',
-  'chapter-fold',
-  'splitter',
-  'alerts',
-  'valine',
-  'popup'
+  'code',  // 代码添加行号&复制按钮
+  'expandable-chapters', // 折叠侧边栏
+  'chapter-fold', // 折叠侧边栏，这2个连用，才可以实现多级标签折叠，不然只有2级标签
+  'theme-lou',  // 网页主题
+  'back-to-top-button',  // 返回顶部按钮
+  'search-pro',   // 高级搜索
+  'flexible-alerts', // 高级格式显示的提示块 
+  'splitter', // 侧边栏宽度可调节
+  'alerts',  // 漂亮格式的提示块
+  //'valine', // 评论功能，开启时有点卡
+  'popup', // 点击图片新页面弹出显示
+  'auto-scroll-table', //自动表格过长滚动条
 ];
 if (process.env.NODE_ENV == 'dev') plugins.push('livereload');
 

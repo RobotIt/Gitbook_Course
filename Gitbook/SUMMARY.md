@@ -25,6 +25,7 @@
 * 2 竞赛追踪
     * 1 中国机器人及人工智能大赛
         * [1 2023-第25届](Markdown/Match/CRAIC2023.md)
+        * [2 2024-第26届](Markdown/Match/CRAIC2024.md)
     * 2 中国高校智能机器人创意大赛
         * [1 2024-第7届](Markdown/Match/RobotContest2024.md)
 * [3 资源工具库](Markdown/Resource/README.md)
